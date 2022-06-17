@@ -1,8 +1,5 @@
 import React from "react";
 import ModalTile from "./ModalTile";
-import OneDOFvid from "../../images/1DOF/1DOF.mp4";
-import c4vid from "../../images/Connect4/C4.mp4";
-import WSvid from "../../images/Web Scrap/WS.mp4";
 import Function from "./Function";
 
 const Projects = () => {
@@ -167,7 +164,7 @@ const Projects = () => {
               </p>
               <div className="">
                 <a
-                  href={require("../../images/FIRE/FIRE_Final.pdf")}
+                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/FIRE/FIRE_Final.pdf"}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-blue-600 hover:text-purple-800"
@@ -241,7 +238,7 @@ const Projects = () => {
 
               <div className="flex justify-center">
                 <Function
-                  image={<video controls src={OneDOFvid} />}
+                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.mp4"} />}
                   caption={
                     "Animation: angle flipped because downwards was positive for this 3DOF animation block"
                   }
@@ -292,7 +289,7 @@ const Projects = () => {
               </div>
 
               <a
-                href={require("../../images/1DOF/1DOF.pdf")}
+                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.pdf"}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-blue-600 hover:text-purple-800"
@@ -341,7 +338,7 @@ const Projects = () => {
                 </div>{" "} */}
 
                 <Function
-                  image={<video controls src={c4vid} />}
+                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Connect4/C4.mp4"} />}
                   caption={"Demo (I am bad at this game)"}
                 ></Function>
               </div>
@@ -389,7 +386,7 @@ const Projects = () => {
 
               <div className="">
                 <a
-                  href={require("../../images/Monte Carlo/Monte Carlo.pdf")}
+                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Monte+Carlo/Monte+Carlo.pdf"}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-blue-600 hover:text-purple-800"
@@ -431,7 +428,9 @@ const Projects = () => {
                 </a>
                 {" "}for a decent amount of inspiration.
               </p>
-             
+              <p>
+                
+              </p>
             </div>
           }
         />
@@ -505,7 +504,7 @@ const Projects = () => {
                 </div>{" "} */}
 
                 <Function
-                  image={<video controls src={WSvid} />}
+                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Web+Scrap/WS.mp4"} />}
                   caption={"Demo"}
                 ></Function>
               </div>

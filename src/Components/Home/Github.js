@@ -1,4 +1,4 @@
-import linkedin from "../../images/github.png";
+import github from "../../images/github.png";
 
 export default function ScrollToTop() {
   const handleClick = () => {
@@ -7,7 +7,7 @@ export default function ScrollToTop() {
   return (
     <div onClick={handleClick}>
       <div className="hover:bg-sky-700  flex mr-5 ml-5 ">
-        <img src={linkedin} className=" max-w-[40px]"></img>
+        <img src={github} className=" max-w-[40px]"></img>
       </div>
     </div>
   );
