@@ -28,15 +28,12 @@ function Coursework({ grade }) {
         <div className="p-4">
           <div className="text-3xl mb-[10px]">Summer 2022</div>
           <div>C S 329E: Elements of Data Analytics</div>
-          <div>C S 327E: Elements of Data Visualization</div>
         </div>
         <div className="p-4">
           <div className=" mb-[10px] text-3xl ">Fall 2022</div>
           <div>E M 319: Solids{grade}</div>
           <div>M E 318M: MATLAB{grade}</div>
           <div>M E 314D: Dynamics {grade}</div>
-          <div>M E 330: Fluids{grade}</div>
-          <div>M E 130L: Fluids Lab{grade}</div>
           <div>UGS 303: Building Winnings Teams{grade}</div>
           <div>UGS 310: Undergrad Research Experience{grade}</div>
         </div>
