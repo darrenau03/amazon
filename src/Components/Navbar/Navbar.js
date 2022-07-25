@@ -4,16 +4,11 @@ import ScrollToTop from "./ScrollToTop";
 
 const NavBar = () => {
   return (
-    <div className="w-full sticky top-0">
-      <div className="">
-        <div className="p-1 max-h-[70px] bg-[#fcfaf9]/75 flex justify-between flex-row items-center ">
-          
-          <ScrollToTop />
-          <div className="flex w-fit items-center overflow-hidden">
-            <ScrollProjects />
-            <ScrollCoursework />
-          </div>
-        </div>
+    <div className="bg-[#495057]/75 text-2xl sticky top-0 flex justify-center items-center flex-wrap font-bold">
+      <div className="flex max-w-[1400px] w-full justify-between items-center overflow-hidden ">
+        <ScrollToTop />
+        <ScrollProjects />
+        <ScrollCoursework />
       </div>
     </div>
   );

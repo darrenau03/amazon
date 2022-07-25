@@ -21,8 +21,8 @@ export default function ScrollProjects() {
       }
     >
       <div className="hover:bg-sky-700 flex mr-5 ml-5">
-        <PuzzleIcon className=" flex max-w-[20px] mr-2 rounded-md "></PuzzleIcon>
-        <h1 className="flex items-center">Projects</h1>
+        <PuzzleIcon className=" flex max-w-[20px] fill-[#e9ecef]  mr-2 rounded-md "></PuzzleIcon>
+        <h1 className="flex items-center text-[#e9ecef]">Projects</h1>
       </div>
     </div>
   );

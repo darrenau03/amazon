@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div
       id="proj"
-      className="flex justify-center mt-[100px] mb-[100px] flex-col"
+      className="flex justify-center mt-[100px] mb-[100px] flex-col max-w-[1400px]"
     >
       <div className="flex text-4xl justify-center font-bold mb-[50px]">
         Projects
@@ -164,7 +164,9 @@ const Projects = () => {
               </p>
               <div className="">
                 <a
-                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/FIRE/FIRE_Final.pdf"}
+                  href={
+                    "https://s3.us-west-1.amazonaws.com/darrenau.com/images/FIRE/FIRE_Final.pdf"
+                  }
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-blue-600 hover:text-purple-800"
@@ -238,7 +240,14 @@ const Projects = () => {
 
               <div className="flex justify-center">
                 <Function
-                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.mp4"} />}
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.mp4"
+                      }
+                    />
+                  }
                   caption={
                     "Animation: angle flipped because downwards was positive for this 3DOF animation block"
                   }
@@ -289,7 +298,9 @@ const Projects = () => {
               </div>
 
               <a
-                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.pdf"}
+                href={
+                  "https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.pdf"
+                }
                 target="_blank"
                 rel="noreferrer noopener"
                 className="text-blue-600 hover:text-purple-800"
@@ -338,7 +349,14 @@ const Projects = () => {
                 </div>{" "} */}
 
                 <Function
-                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Connect4/C4.mp4"} />}
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Connect4/C4.mp4"
+                      }
+                    />
+                  }
                   caption={"Demo (I am bad at this game)"}
                 ></Function>
               </div>
@@ -386,7 +404,9 @@ const Projects = () => {
 
               <div className="">
                 <a
-                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Monte+Carlo/Monte+Carlo.pdf"}
+                  href={
+                    "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Monte+Carlo/Monte+Carlo.pdf"
+                  }
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-blue-600 hover:text-purple-800"
@@ -419,18 +439,16 @@ const Projects = () => {
               </p>
               <p>
                 {" "}
-                Credit to Kevin Yu and his {" "}
+                Credit to Kevin Yu and his{" "}
                 <a
                   href="https://kevinhyu.com/"
                   className=" text-blue-600 hover:text-purple-800"
                 >
                   site
-                </a>
-                {" "}for a decent amount of inspiration.
+                </a>{" "}
+                for a decent amount of inspiration.
               </p>
-              <p>
-                
-              </p>
+              <p></p>
             </div>
           }
         />
@@ -504,10 +522,101 @@ const Projects = () => {
                 </div>{" "} */}
 
                 <Function
-                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Web+Scrap/WS.mp4"} />}
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Web+Scrap/WS.mp4"
+                      }
+                    />
+                  }
                   caption={"Demo"}
                 ></Function>
               </div>
+            </div>
+          }
+        />
+        <ModalTile
+          projectName={"Arduino Bathroom Detector"}
+          image={require("../../images/Bathroom Detector/cover.png")}
+          description="Arduino Project to Detect if Roommate is in Bathroom"
+          projectDuration={"June 2021"}
+          toolsUsed={"Arduino"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                Living in the dorms with two roommates, an unusually common
+                problem for me was deciding whether ot not to use the restroom
+                in the dorm lobby before returning to my dorm or not, as I was
+                uncertain if one of my roommates would be in there.
+              </p>
+              <p>
+                This Arduino project would allow me to figure out through a
+                webserver hosted using an ESP8266 Wi-Fi microchip.
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/detector.mp4"
+                      }
+                    />
+                  }
+                  caption={"Ultrasonic Demo"}
+                ></Function>
+              </div>
+              <p>
+                The ultrasonic sensor will point at the door and the value will
+                increase greatly when the door is open as opposed to closed. If
+                the value is greater than 50, the door is determined to be open.
+                Otherwise, it is closed. As the door to the bathroom usually
+                remains open, this method would allow me to know if someone is
+                in there.
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/humidity.mp4"
+                      }
+                    />
+                  }
+                  caption={"Humidity Demo"}
+                ></Function>
+              </div>
+              <p>
+                There is a humidity sensor as well that will go up if the
+                humidity goes up, which can be used to extrapolate if someone is
+                in the shower, letting me know that they will probably be in
+                there for a while.
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/light.mp4"
+                      }
+                    />
+                  }
+                  caption={"Humidity Demo"}
+                ></Function>
+              </div>
+              <p>
+                There is also a light switch that can be controlled from the
+                webserver, allowing me to communicate with my roommate as an
+                indicator if I would like to use the restroom.
+              </p>
+              <p>
+                Sadly, UT wifi doesn't allow for hosting a webserver so the
+                project was never utilized, but it remained a good learning
+                experience for arduino and breadboarding.
+              </p>
             </div>
           }
         />

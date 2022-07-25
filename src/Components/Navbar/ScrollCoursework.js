@@ -21,8 +21,8 @@ export default function ScrollCoursework() {
       }
     >
       <div className=" hover:bg-sky-700 flex mr-5 ml-5">
-        <ClipboardIcon className="flex max-w-[20px] mr-2 rounded-md"></ClipboardIcon>
-        <h1 className="flex items-center whitespace-nowrap">Course Work</h1>
+        <ClipboardIcon className="flex max-w-[20px] mr-2 rounded-md fill-[#e9ecef]"></ClipboardIcon>
+        <h1 className="flex items-center whitespace-nowrap text-[#e9ecef]">Course Work</h1>
       </div>
     </div>
   );

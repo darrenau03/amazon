@@ -14,7 +14,7 @@ const ModalTile = ({ projectName, image, description, modalHtml, projectDuration
   return (
     <div className="flex w-1/4 min-w-[350px] mb-[10px] m-[10px]">
       <div
-        className="flex flex-col bg-zinc-600 p-4 rounded-md text-white"
+        className="flex flex-col bg-[#495057] p-4 rounded-md text-white"
         onClick={clicked}
       >
         <div className="flex text-2xl text-center justify-center">

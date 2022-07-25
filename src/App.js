@@ -1,5 +1,5 @@
 import "./App.css";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects";
 import Coursework from "./Components/Coursework/Coursework";
@@ -9,14 +9,20 @@ export default function App() {
   return (
     <div>
       <Helmet>
-        <style>{"body { background-color: #f1f2eb; }"}</style>
+        <style>{"body { background-color: #7F8487; }"}</style>
       </Helmet>
-      <div className="flex justify-center h-fit z-50">
-        <div className="flex flex-col w-screen max-w-[1400px] ">
+      <div className="flex justify-center  w-full">
+        <div className="flex flex-col justify-center w-full">
           <Navbar />
-          <Home />
-          <Projects />
-          <Coursework grade = ""/>
+          <div className="flex justify-center bg-[#dee2e6]">
+            <Home />
+          </div>
+          <div className="flex justify-center bg-[#ced4da]">
+            <Projects />
+          </div>
+          <div className="flex justify-center bg-[#dee2e6]">
+            <Coursework grade="" />
+          </div>
         </div>
       </div>
     </div>
