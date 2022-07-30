@@ -290,7 +290,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                      // className="object-contain w-50px"
+                    // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
@@ -628,45 +628,116 @@ const Projects = () => {
           toolsUsed={""}
           modalHtml={
             <div className="space-y-4 flex flex-col">
-              <p className="italic">
-               
-               <a
-                 href="https://github.com/darrenau03/FIRE-Machine-Learning"
-                 className=" text-blue-600 hover:text-purple-800"
-               >
-                 text
-               </a>
-               
-             </p>
-             <div className="">
-               <a
-                 href={require("../../images/FIRE/FIRE_Final.pdf")}
-                 target="_blank"
-                 rel="noreferrer noopener"
-                 className="text-blue-600 hover:text-purple-800"
-               >
-                 PDF of Final Report
-               </a>
-             </div>
-             <div className="flex justify-center">
-               <Function
-                 image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/detector.mp4"} />}
-                 caption={
-                   "Animation: angle flipped because downwards was positive for this 3DOF animation block"
-                 }
-               ></Function>
-             </div>
-             <div className="flex justify-center">
-               <Function
-                 image={
-                   <img
-                     src={require("../../images/1DOF/Kinematic.png")}
-                     alt={"Kinematic Scope"}
-                   />
-                 }
-                 caption={"Kinematics Graph"}
-               ></Function>
-             </div>
+              <p>
+                The summer following my freshman year, I did research at the{" "}
+                <a
+                  href="https://sites.utexas.edu/herolab/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  HeRo Lab
+                </a>
+                , under the supervision of{" "}
+                <a
+                  href="https://www.me.utexas.edu/people/faculty-directory/amfey"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Dr. Ann Majewicz Fey
+                </a>
+                .
+              </p>
+              <p>
+                My role was to write the data analysis code for an ongoing project called the Baby Silo.
+                More information can be found in my{" "}
+                <a
+                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/HeRo/Undergraduate+Honors+Thesis.docx"}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-blue-600 hover:text-purple-800"
+                >
+                  partner's senior thesis
+                </a>
+                , but to put it in simple terms:
+                my job was to design a system to reliably measure the diameter of a compliant silicon ring as it is expanded via air.
+              </p>
+              <p>
+                This used to be done was with electromagnetic trackers fastened to the sides of the ring. However,
+                this solution was proven to be cumbersome due to the difficulty mounting them on each ring individually.
+              </p>
+              <p>
+                My approach involved using computer vision to measure the diameter. This is done through the contour detection
+                algorithm that exists in OpenCV and creating a mapping function to take the area of the contours to determine the diameter of the ring. 
+                It saves the results as a time series in an excel while another script can read from the excel file to plot the results.
+              </p>
+              <p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/ring id.jpg")}
+                      alt={"Ring Internal Diameter"}
+                    />
+                  }
+                  caption={"Ring Internal Diameter"}
+                ></Function>
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/ring od.jpg")}
+                      alt={"Ring Outer Diameter"}
+                    />
+                  }
+                  caption={"Ring Outer Diameter"}
+                ></Function>
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/tape id.jpg")}
+                      alt={"Tape Internal Diameter"}
+                    />
+                  }
+                  caption={"Tape Internal Diameter"}
+                ></Function>
+                <Function
+                  image={
+                    <img
+                    src={require("../../images/HeRo/tape od.jpg")}
+                      alt={"Tape Internal Diameter"}
+                    />
+                  }
+                  caption={"Tape Outer Diameter"}
+                ></Function>
+              </div>
+              <div className="flex justify-center">
+              <Function
+                  image={
+                    <img
+                    src={require("../../images/HeRo/Graphs.png")}
+                      alt={"Tape Internal Diameter"}
+                    />
+                  }
+                  caption={"Tape Outer Diameter"}
+                ></Function>
+              </div>
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/HeRo/vid.mp4"} />}
+                  caption={
+                    "Animation: angle flipped because downwards was positive for this 3DOF animation block"
+                  }
+                ></Function>
+              </div>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/1DOF/Kinematic.png")}
+                      alt={"Kinematic Scope"}
+                    />
+                  }
+                  caption={"Kinematics Graph"}
+                ></Function>
+              </div>
             </div>
           }
         />
