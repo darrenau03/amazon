@@ -620,6 +620,56 @@ const Projects = () => {
             </div>
           }
         />
+        <ModalTile
+          projectName={"HeRo Summer Research"}
+          image={require("../../images/HeRo/HeRo.png")}
+          description=""
+          projectDuration={""}
+          toolsUsed={""}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p className="italic">
+               
+               <a
+                 href="https://github.com/darrenau03/FIRE-Machine-Learning"
+                 className=" text-blue-600 hover:text-purple-800"
+               >
+                 text
+               </a>
+               
+             </p>
+             <div className="">
+               <a
+                 href={require("../../images/FIRE/FIRE_Final.pdf")}
+                 target="_blank"
+                 rel="noreferrer noopener"
+                 className="text-blue-600 hover:text-purple-800"
+               >
+                 PDF of Final Report
+               </a>
+             </div>
+             <div className="flex justify-center">
+               <Function
+                 image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/detector.mp4"} />}
+                 caption={
+                   "Animation: angle flipped because downwards was positive for this 3DOF animation block"
+                 }
+               ></Function>
+             </div>
+             <div className="flex justify-center">
+               <Function
+                 image={
+                   <img
+                     src={require("../../images/1DOF/Kinematic.png")}
+                     alt={"Kinematic Scope"}
+                   />
+                 }
+                 caption={"Kinematics Graph"}
+               ></Function>
+             </div>
+            </div>
+          }
+        />
       </div>
     </div>
   );
