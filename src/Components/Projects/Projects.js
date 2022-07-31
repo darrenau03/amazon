@@ -14,7 +14,7 @@ const Projects = () => {
       <div className="flex flex-wrap flex-row justify-center">
         <ModalTile
           projectName={"Thrust Vector Control"}
-          image={require("../../images/TVC/TVC.png")}
+          image={require("../../images/TVC/TREL.png")}
           description="Gimbal mechanism for rocket engine"
           projectDuration={"Jan 2022 - Present"}
           toolsUsed={"Solidworks, Ansys"}
@@ -79,10 +79,50 @@ const Projects = () => {
                 component.
               </p>
               <p>
-                There is still a lot of work to be done but I am very grateful
-                for this opportunity and excited to watch this project progress
+                Unfortunately due to ITAR regulations, most of the work cannot
+                be shared. However, the 3d printed have been approved for public
+                release and displayed below.
               </p>
-              <p className="text-xs">Progress as of May 2022</p>
+              <div className="flex justify-center items-center ">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC1.mp4"
+                      }
+                    />
+                  }
+                  caption={"Preliminary Testing with Keyboard Control"}
+                ></Function>
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC2.mp4"
+                      }
+                    />
+                  }
+                  caption={"Middle Ring Full Range Motion"}
+                ></Function>
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC3.mp4"
+                      }
+                    />
+                  }
+                  caption={"Inner Ring Full Range Motion"}
+                ></Function>
+              </div>
+              <p>
+                There is still a lot of work to be done but I am very grateful
+                for this opportunity and excited to watch this project progress.
+              </p>
+              <p className="text-xs">Progress as of August 2022</p>
             </div>
           }
         />
@@ -320,7 +360,9 @@ const Projects = () => {
                         alt={"Graphs"}
                       />
                     }
-                    caption={"Graphs of the ID and OD: X is time in seconds and Y is diameter in inches"}
+                    caption={
+                      "Graphs of the ID and OD: X is time in seconds and Y is diameter in inches"
+                    }
                   ></Function>
 
                   <Function
@@ -590,50 +632,6 @@ const Projects = () => {
         />
 
         <ModalTile
-          projectName={"Monte Carlo "}
-          image={require("../../images/Monte Carlo/MC.png")}
-          description="Monte Carlo Simulation"
-          projectDuration={"December 2021"}
-          toolsUsed={"MATLAB"}
-          modalHtml={
-            <div className="space-y-4 flex flex-col">
-              <p>
-                {" "}
-                I created a{" "}
-                <a
-                  href="https://en.wikipedia.org/wiki/Monte_Carlo_method"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  Monte Carlo
-                </a>{" "}
-                Simulation in MATLAB to determine the distribution of apogees
-                our rocket in{" "}
-                <a
-                  href="https://www.texasrocketlab.com/"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  TREL
-                </a>{" "}
-                would hit.
-              </p>
-
-              <div className="">
-                <a
-                  href={
-                    "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Monte+Carlo.pdf"
-                  }
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="text-blue-600 hover:text-purple-800"
-                >
-                  PDF of Report
-                </a>
-              </div>
-            </div>
-          }
-        />
-
-        <ModalTile
           projectName={"Website"}
           image={require("../../images/Website/Website.png")}
           description="Website for Personal Portfolio"
@@ -645,7 +643,7 @@ const Projects = () => {
               <p>
                 {" "}
                 <a
-                  href="https://github.com/darrenau03/react"
+                  href="https://github.com/darrenau03/amazon"
                   className=" text-blue-600 hover:text-purple-800"
                 >
                   Link to GitHub Repo
@@ -664,6 +662,59 @@ const Projects = () => {
                 for a decent amount of inspiration.
               </p>
               <p></p>
+            </div>
+          }
+        />
+        <ModalTile
+          projectName={"Gas Bot"}
+          image={require("../../images/Gas Bot/Gas Bot.png")}
+          description="Gas Bot to Determine Cheapest Gas"
+          projectDuration={"July 2022"}
+          toolsUsed={"Python, Selenium, Google Maps API, MongoDB"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                During the Spring semester of my freshman year, before one of
+                our outings, my friend told our group that he would be driving
+                20 minutes to get gas at a cheaper station. Thus began a
+                discussion on how much cheaper would gas have to be to make the
+                journey worth it. Inspired by that conversation, I decided to
+                create a bot that would perform that calculation.
+              </p>
+              <p>
+                It works by taking the 10 cheapest gas stations in Austin from
+                Gas Buddy, calculates the distance/time to drive there from the
+                current location with google maps API, and saves all the data
+                into a MongoDB. It then request for the user to input their
+                gallons needed as well as how much their time costs. Using all
+                these parameters, it spits out ranking of the 10 stations from
+                least to most "expensive", with time it takes to get there as a
+                consideration.
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Gas Bot.mp4"
+                      }
+                    />
+                  }
+                  caption={"WebScrap/Data Save"}
+                ></Function>
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Gas Bot2.mp4"
+                      }
+                    />
+                  }
+                  caption={"UserInput/Calculations"}
+                ></Function>
+              </div>
             </div>
           }
         />
