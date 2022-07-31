@@ -5,7 +5,7 @@ export default function ScrollToTop() {
     <div
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      <div className="hover:bg-sky-700 flex mr-5 ml-5 ">
+      <div className="hover:bg-sky-700 rounded-lg flex mr-5 ml-5 ">
         <img src={linkedin} className=" flex max-w-[50px] rounded-md "></img>
         {/* <h1 className="flex items-center">Home</h1> */}
       </div>

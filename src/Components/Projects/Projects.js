@@ -9,7 +9,7 @@ const Projects = () => {
       className="flex justify-center mt-[100px] mb-[100px] flex-col max-w-[1400px]"
     >
       <div className="flex text-4xl justify-center font-bold mb-[50px]">
-        Projects
+        School Projects
       </div>
       <div className="flex flex-wrap flex-row justify-center">
         <ModalTile
@@ -65,17 +65,6 @@ const Projects = () => {
                 primarily through the top, right, and front planes, using folder
                 and equations, creating hotkeys to improve workflow, and more.
               </p>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/TVC/Solidworks.png")}
-                      alt={"Solidworks"}
-                    />
-                  }
-                  caption={"CAD with Folders and equation driven mating"}
-                ></Function>
-              </div>
               <p>
                 <p>2) Learning a bit of solids and dynamics</p> In order to
                 perform hand calcs to spec the linear actuators, bearings,
@@ -83,36 +72,12 @@ const Projects = () => {
                 It required that I learn solids and dynamics, preparing me for
                 these courses that I will be taking in Fall 2022.{" "}
               </p>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/TVC/Hand Calcs.png")}
-                      alt={"Hand Calcs"}
-                    />
-                  }
-                  caption={
-                    "Hand Calcs for Acceleration needed of Linear Actuators"
-                  }
-                />
-              </div>
               <p>
                 <p>3) Conducting Ansys/FEAs</p> While designing, I would also
                 have to test the components in Ansys to ensure the stress from
                 the engine would cause stress under the yield strength of the
                 component.
               </p>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/TVC/Ansys.png")}
-                      alt={"Ansys"}
-                    ></img>
-                  }
-                  caption={"FEA of Middle Ring"}
-                ></Function>
-              </div>
               <p>
                 There is still a lot of work to be done but I am very grateful
                 for this opportunity and excited to watch this project progress
@@ -165,7 +130,7 @@ const Projects = () => {
               <div className="">
                 <a
                   href={
-                    "https://s3.us-west-1.amazonaws.com/darrenau.com/images/FIRE/FIRE_Final.pdf"
+                    "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/FIRE_Final.pdf"
                   }
                   target="_blank"
                   rel="noreferrer noopener"
@@ -212,6 +177,256 @@ const Projects = () => {
           }
         />
         <ModalTile
+          projectName={"HeRo Summer Research"}
+          image={require("../../images/HeRo/HeRo.png")}
+          description="Undergraduate Summer Researcher"
+          projectDuration={"May 2022 - August 2022 "}
+          toolsUsed={"Python, OpenCV, Solidworks, manual mill"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                The summer following my freshman year, I was employed as an
+                Undergraduate Research Assistant as a part of{" "}
+                <a
+                  href="https://robotics.utexas.edu//"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Texas Robotics
+                </a>{" "}
+                at the{" "}
+                <a
+                  href="https://sites.utexas.edu/herolab/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  HeRo Lab
+                </a>
+                , under the supervision of{" "}
+                <a
+                  href="https://www.me.utexas.edu/people/faculty-directory/amfey"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Dr. Ann Majewicz Fey
+                </a>
+                .
+              </p>
+              <p>
+                My role was to write the data analysis code for an ongoing
+                project called the Baby Silo. More information can be found in
+                my{" "}
+                <a
+                  href={
+                    "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Undergraduate+Honors+Thesis.docx"
+                  }
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-blue-600 hover:text-purple-800"
+                >
+                  partner's senior thesis
+                </a>
+                , but to put it in simple terms: my job was to design a system
+                to reliably measure the diameter of a compliant silicon ring as
+                it is expanded via air being pumped into the ring.
+              </p>
+              <p>
+                This used to be done was with electromagnetic trackers fastened
+                to the sides of the ring. However, this solution was proven to
+                be cumbersome due to the difficulty mounting them on each ring
+                individually.
+              </p>
+              <p>
+                My approach involved using computer vision to measure the
+                diameter. This is done through the contour detection algorithm
+                that exists in OpenCV and creating a mapping function to take
+                the area of the contours to determine the diameter of the ring.
+                It saves the results as a time series in an excel while another
+                script can read from the excel file to plot the results.
+              </p>
+              <p>
+                To make sure the algorithm can run properly, it requires that
+                the ring is flush on the surface (doesn't rotate). To ensure
+                this, I created a jig that would prevent this. It functions by
+                having a piece of acrylic mounted on 4 dowel pins, such that
+                motion is restricted vertically, thus preventing rotational
+                motion.
+              </p>
+              <div className="flex justify-center">
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/CAD.png")}
+                      alt={"AntiRollJig"}
+                    />
+                  }
+                  caption={"CAD"}
+                ></Function>
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/AntiRollJig.png")}
+                      alt={"AntiRollJig"}
+                    />
+                  }
+                  caption={"Jig"}
+                ></Function>
+              </div>
+              <p>
+                The results after running the algorithm on a couple rings are
+                shown below.
+              </p>
+              <p>
+                <div className="flex justify-center">
+                  <Function
+                    image={
+                      <img
+                        src={require("../../images/HeRo/ring id.jpg")}
+                        alt={"Ring Internal Diameter"}
+                      />
+                    }
+                    caption={"Ring Internal Diameter"}
+                  ></Function>
+                  <Function
+                    image={
+                      <img
+                        src={require("../../images/HeRo/ring od.jpg")}
+                        alt={"Ring Outer Diameter"}
+                      />
+                    }
+                    caption={"Ring Outer Diameter"}
+                  ></Function>
+                  <Function
+                    image={
+                      <img
+                        src={require("../../images/HeRo/tape id.jpg")}
+                        alt={"Tape Internal Diameter"}
+                      />
+                    }
+                    caption={"Tape Internal Diameter"}
+                  ></Function>
+                  <Function
+                    image={
+                      <img
+                        src={require("../../images/HeRo/tape od.jpg")}
+                        alt={"Tape Internal Diameter"}
+                      />
+                    }
+                    caption={"Tape Outer Diameter"}
+                  ></Function>
+                </div>
+                <div className="flex justify-center items-center ">
+                  <Function
+                    image={
+                      <img
+                        src={require("../../images/HeRo/Graphs.png")}
+                        alt={"Graphs"}
+                      />
+                    }
+                    caption={"Graphs of the ID and OD: X is time in seconds and Y is diameter in inches"}
+                  ></Function>
+
+                  <Function
+                    image={
+                      <video
+                        controls
+                        src={
+                          "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/vid.mp4"
+                        }
+                      />
+                    }
+                    caption={"Video correlation to graph"}
+                  ></Function>
+                </div>
+              </p>
+              <p>
+                As seen from the pictures, the program detects quite accurately;
+                the tape outer diameter differs the most at .05 inches from the
+                calliper measured true value while the other 3 values differ by
+                less than 0.01 inches. This 0.05 offset is a result of the
+                imperfect circle formed when the ring is calibrated due to the
+                tube that is required for the air.
+              </p>
+              <p>
+                The code also incorporates an a camera calibration algorithm
+                that corrects for distortion. This is done with an OpenCV
+                function that recognizes a checkerboard to extract the
+                parameters needed to undistort the image.
+              </p>
+              <div className="flex justify-center items-center">
+                <Function
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/AntiDistortion.mp4"
+                      }
+                    />
+                  }
+                  caption={
+                    "Undistorting Code: recognizes the checkerboard and undistorts the camera output"
+                  }
+                ></Function>
+                <Function
+                  image={
+                    <img
+                      src={require("../../images/HeRo/AntiDistortion.png")}
+                      alt={"Kinematic Scope"}
+                    />
+                  }
+                  caption={"Results"}
+                ></Function>
+              </div>
+              <p>
+                If you expand the above image, you can see that the edges of the
+                checkerboard concave out slightly over the straight lines drawn
+                while the undistorted images has the lines completely straight,
+                validating the algorithm.
+              </p>
+            </div>
+          }
+        />
+        <ModalTile
+          projectName={"Data Analytics Final"}
+          image={require("../../images/CS 329E/CS329.png")}
+          description="Final Project for Data Analytics Course"
+          projectDuration={"May 2022 - July 2022"}
+          toolsUsed={"Python, SciPy, Numpy, Pandas"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                As part of the Final Project for the Data Analytics course I
+                took over the summer, we were required to create a project that
+                would analyze a dataset, create graphs that would display
+                meaningful information as well as perform predictions on said
+                dataset.
+              </p>
+              <a
+                href={
+                  "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TermProjPresentation.pdf"
+                }
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-blue-600 hover:text-purple-800"
+              >
+                PDF of Presentation
+              </a>
+              <a
+                href={
+                  "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Final.ipynb"
+                }
+                target="_blank"
+                rel="noreferrer noopener"
+                className="text-blue-600 hover:text-purple-800"
+              >
+                Jupyter Notebook of Code
+              </a>
+            </div>
+          }
+        />
+      </div>
+      <div className="flex text-4xl justify-center font-bold mt-[100px] mb-[50px]">
+        Personal Projects
+      </div>
+      <div className="flex flex-wrap flex-row justify-center">
+        <ModalTile
           projectName={"1DOF"}
           image={require("../../images/1DOF/1DOF.png")}
           description="1DOF Rocket Simulation"
@@ -244,7 +459,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/1DOF.mp4"
                       }
                     />
                   }
@@ -290,7 +505,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                    // className="object-contain w-50px"
+                      // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
@@ -299,7 +514,7 @@ const Projects = () => {
 
               <a
                 href={
-                  "https://s3.us-west-1.amazonaws.com/darrenau.com/images/1DOF/1DOF.pdf"
+                  "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/1DOF.pdf"
                 }
                 target="_blank"
                 rel="noreferrer noopener"
@@ -353,7 +568,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Connect4/C4.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/C4.mp4"
                       }
                     />
                   }
@@ -405,7 +620,7 @@ const Projects = () => {
               <div className="">
                 <a
                   href={
-                    "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Monte+Carlo/Monte+Carlo.pdf"
+                    "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Monte+Carlo.pdf"
                   }
                   target="_blank"
                   rel="noreferrer noopener"
@@ -526,7 +741,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Web+Scrap/WS.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/WS.mp4"
                       }
                     />
                   }
@@ -560,7 +775,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/detector.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/detector.mp4"
                       }
                     />
                   }
@@ -581,7 +796,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/humidity.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/humidity.mp4"
                       }
                     />
                   }
@@ -600,7 +815,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/images/Bathroom+Detector/light.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/light.mp4"
                       }
                     />
                   }
@@ -617,127 +832,6 @@ const Projects = () => {
                 project was never utilized, but it remained a good learning
                 experience for arduino and breadboarding.
               </p>
-            </div>
-          }
-        />
-        <ModalTile
-          projectName={"HeRo Summer Research"}
-          image={require("../../images/HeRo/HeRo.png")}
-          description=""
-          projectDuration={""}
-          toolsUsed={""}
-          modalHtml={
-            <div className="space-y-4 flex flex-col">
-              <p>
-                The summer following my freshman year, I did research at the{" "}
-                <a
-                  href="https://sites.utexas.edu/herolab/"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  HeRo Lab
-                </a>
-                , under the supervision of{" "}
-                <a
-                  href="https://www.me.utexas.edu/people/faculty-directory/amfey"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  Dr. Ann Majewicz Fey
-                </a>
-                .
-              </p>
-              <p>
-                My role was to write the data analysis code for an ongoing project called the Baby Silo.
-                More information can be found in my{" "}
-                <a
-                  href={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/HeRo/Undergraduate+Honors+Thesis.docx"}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="text-blue-600 hover:text-purple-800"
-                >
-                  partner's senior thesis
-                </a>
-                , but to put it in simple terms:
-                my job was to design a system to reliably measure the diameter of a compliant silicon ring as it is expanded via air.
-              </p>
-              <p>
-                This used to be done was with electromagnetic trackers fastened to the sides of the ring. However,
-                this solution was proven to be cumbersome due to the difficulty mounting them on each ring individually.
-              </p>
-              <p>
-                My approach involved using computer vision to measure the diameter. This is done through the contour detection
-                algorithm that exists in OpenCV and creating a mapping function to take the area of the contours to determine the diameter of the ring. 
-                It saves the results as a time series in an excel while another script can read from the excel file to plot the results.
-              </p>
-              <p>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/HeRo/ring id.jpg")}
-                      alt={"Ring Internal Diameter"}
-                    />
-                  }
-                  caption={"Ring Internal Diameter"}
-                ></Function>
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/HeRo/ring od.jpg")}
-                      alt={"Ring Outer Diameter"}
-                    />
-                  }
-                  caption={"Ring Outer Diameter"}
-                ></Function>
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/HeRo/tape id.jpg")}
-                      alt={"Tape Internal Diameter"}
-                    />
-                  }
-                  caption={"Tape Internal Diameter"}
-                ></Function>
-                <Function
-                  image={
-                    <img
-                    src={require("../../images/HeRo/tape od.jpg")}
-                      alt={"Tape Internal Diameter"}
-                    />
-                  }
-                  caption={"Tape Outer Diameter"}
-                ></Function>
-              </div>
-              <div className="flex justify-center">
-              <Function
-                  image={
-                    <img
-                    src={require("../../images/HeRo/Graphs.png")}
-                      alt={"Tape Internal Diameter"}
-                    />
-                  }
-                  caption={"Tape Outer Diameter"}
-                ></Function>
-              </div>
-              </p>
-              <div className="flex justify-center">
-                <Function
-                  image={<video controls src={"https://s3.us-west-1.amazonaws.com/darrenau.com/images/HeRo/vid.mp4"} />}
-                  caption={
-                    "Animation: angle flipped because downwards was positive for this 3DOF animation block"
-                  }
-                ></Function>
-              </div>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/1DOF/Kinematic.png")}
-                      alt={"Kinematic Scope"}
-                    />
-                  }
-                  caption={"Kinematics Graph"}
-                ></Function>
-              </div>
             </div>
           }
         />

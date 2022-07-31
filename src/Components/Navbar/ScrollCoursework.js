@@ -20,7 +20,7 @@ export default function ScrollCoursework() {
         })
       }
     >
-      <div className=" hover:bg-sky-700 flex mr-5 ml-5">
+      <div className=" hover:bg-sky-700 flex rounded-lg mr-5 ml-5">
         <ClipboardIcon className="flex max-w-[20px] mr-2 rounded-md fill-[#495057]"></ClipboardIcon>
         <h1 className="flex items-center whitespace-nowrap text-[#495057]">Course Work</h1>
       </div>

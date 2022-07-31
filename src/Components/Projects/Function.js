@@ -8,7 +8,7 @@ const Function = ({ image, caption }) => {
     setImageOn(true);
   };
   return (
-    <div className="flex">
+    <div className="flex p-2">
       <div onClick={clicked} className="flex flex-col">
         <div className="object-scale-down max-w-[500px]  flex mt-10 mb-5 rounded mx-auto">
           {image}

@@ -39,7 +39,7 @@ const Modal = ({
           </div>
           <div className="flex justify-end sticky top-0">
             <button onClick={handleOKClick} className="w-10 flex mb-5">
-              <div className="flex flex-row text-3xl justify-center align-center text-neutral-700 w-10 h-10">
+              <div className="flex flex-row text-3xl justify-center align-center rounded-lg hover:bg-red-500 text-neutral-700 w-10 h-10">
                 x
               </div>
             </button>

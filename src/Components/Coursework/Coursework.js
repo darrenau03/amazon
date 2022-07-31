@@ -35,7 +35,6 @@ function Coursework({ grade }) {
           <div>M E 318M: MATLAB{grade}</div>
           <div>M E 314D: Dynamics {grade}</div>
           <div>UGS 303: Building Winnings Teams{grade}</div>
-          <div>UGS 310: Undergrad Research Experience{grade}</div>
         </div>
       </div>
     </div>
