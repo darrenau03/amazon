@@ -122,6 +122,21 @@ const Projects = () => {
                 There is still a lot of work to be done but I am very grateful
                 for this opportunity and excited to watch this project progress.
               </p>
+              <p className="text-sm">
+                A couple of social media features:{" "}
+                <a
+                  href="https://www.linkedin.com/posts/sandybarker_design-testing-success-activity-6959970570717339649-lHtc?utm_source=linkedin_share&utm_medium=member_desktop_web/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Linkedin
+                </a>{" "}
+                <a
+                  href="https://www.instagram.com/p/CgulUspuFVK/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Instagram
+                </a>
+              </p>
               <p className="text-xs">Progress as of August 2022</p>
             </div>
           }
@@ -547,7 +562,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                      // className="object-contain w-50px"
+                    // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
