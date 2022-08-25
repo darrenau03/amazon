@@ -13,7 +13,7 @@ function Coursework({ grade }) {
           <div className=" mb-[10px] text-3xl ">Fall 2021</div>
           <div>M E 316T: Thermodynamics{grade}</div>
           <div>M E 333T: Engineering Communications{grade}</div>
-          <div>C S 313E: Elements of Software Engineering{grade}</div>
+          <div>C S 313E: Elements of Software Design{grade}</div>
           <div>HIS 315L: The United States Since 1865{grade}</div>
           <div>M E 177K: Projects in Mechanical Engineering{grade}</div>
         </div>
