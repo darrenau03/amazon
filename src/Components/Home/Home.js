@@ -53,12 +53,22 @@ const Home = () => {
           <div className="flex flex-row items-center justify-between mt-[50px] h-[20px]">
             <div>
               <a
-                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Resume.pdf"}
+                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume.pdf"}
                 target="_blank"
                 rel="noreferrer noopener"
                 className=" hover:text-purple-800 font-bold"
               >
                  Resume
+              </a>
+            </div>
+            <div>
+              <a
+                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume_SWE.pdf"}
+                target="_blank"
+                rel="noreferrer noopener"
+                className=" hover:text-purple-800 font-bold"
+              >
+                 Resume - SWE
               </a>
             </div>
             <Linkedin></Linkedin>
