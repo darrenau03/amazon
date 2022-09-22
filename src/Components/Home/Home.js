@@ -61,7 +61,7 @@ const Home = () => {
                  Resume
               </a>
             </div>
-            <div>
+            {/* <div>
               <a
                 href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume_SWE.pdf"}
                 target="_blank"
@@ -70,7 +70,7 @@ const Home = () => {
               >
                  Resume - SWE
               </a>
-            </div>
+            </div> */}
             <Linkedin></Linkedin>
             <Github></Github>
           </div>
