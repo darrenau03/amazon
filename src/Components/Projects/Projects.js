@@ -89,35 +89,30 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC1.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC5.mp4"
                       }
                     />
                   }
-                  caption={"Preliminary Testing with Keyboard Control"}
+                  caption={"Full Range Motion Gimbal"}
                 ></Function>
                 <Function
                   image={
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC2.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC6.mp4"
                       }
                     />
                   }
-                  caption={"Middle Ring Full Range Motion"}
-                ></Function>
-                <Function
-                  image={
-                    <video
-                      controls
-                      src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC3.mp4"
-                      }
-                    />
-                  }
-                  caption={"Inner Ring Full Range Motion"}
+                  caption={"Linear Actuator Encoder Test"}
                 ></Function>
               </div>
+              <p>
+                The first video shows the full range of motion of the TVC system
+                gimbaling the engine. The 2nd one show a linear actuator test
+                where the speed of the linear actuator is dependent on the
+                encoder position, modified by setting the PWM signal duty cycle{" "}
+              </p>
               <p>
                 There is still a lot of work to be done but I am very grateful
                 for this opportunity and excited to watch this project progress.
@@ -137,7 +132,7 @@ const Projects = () => {
                   Instagram
                 </a>
               </p>
-              <p className="text-xs">Progress as of August 2022</p>
+              <p className="text-xs">Progress as of October 2022</p>
             </div>
           }
         />
@@ -208,15 +203,15 @@ const Projects = () => {
           modalHtml={
             <div className="space-y-4 flex flex-col">
               <p>
-                As a dynamics member, I helped machine components for the{" "}
+                I joined {" "}
                 <a
                   href="https://www.longhornracing.org/electric-vehicle"
                   className=" text-blue-600 hover:text-purple-800"
                 >
                   Longhorn Racing Electric Team
                 </a>
-                . This included shims, plugs, jig components, and more. I also
-                helped draft drawings using conventional tolerancing. This
+                {" "} as a dynamics member during the 2021-2022 season, where I helped machine components. This included shims, plugs, jig components, and more. I
+                also helped draft drawings using conventional tolerancing. This
                 opportunity also taught me a lot about vehicle dynamics such as
                 purpose of camber, caster, toe, what an arb was and how it
                 functioned,{" "}
@@ -227,6 +222,10 @@ const Projects = () => {
                   Ackermann steering geometry
                 </a>
                 , etc
+              </p>
+              <p>
+                This year, I'm on the powertrain team, where my role is to help create the lap simulation used to help sweep dynamic parameters and aid component selection.
+                
               </p>
             </div>
           }
@@ -562,7 +561,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                    // className="object-contain w-50px"
+                      // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
@@ -821,7 +820,7 @@ const Projects = () => {
           projectName={"Arduino Bathroom Detector"}
           image={require("../../images/Bathroom Detector/cover.png")}
           description="Arduino Project to Detect if Roommate is in Bathroom"
-          projectDuration={"June 2021"}
+          projectDuration={"June 2022"}
           toolsUsed={"Arduino"}
           modalHtml={
             <div className="space-y-4 flex flex-col">
