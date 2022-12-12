@@ -21,7 +21,10 @@ function Coursework({ grade }) {
           <div className="text-3xl mb-[10px]">Spring 2022</div>
           <div>E M 306: Statics{grade}</div>
           <div>M 427J: Differential Equations with Linear Algebra{grade}</div>
-          <div>M 427L: Vector Calculus{grade}</div>
+          <div>
+            M 427L: Vector Calculus (Advanced Calculus for Applications II)
+            {grade}
+          </div>
           <div>M E 302: Intro to Engineering Design and Graphics{grade}</div>
           <div>UGS 310: Undergrad Research Experience{grade}</div>
         </div>
@@ -31,10 +34,22 @@ function Coursework({ grade }) {
         </div>
         <div className="p-4 w-80">
           <div className=" mb-[10px] text-3xl ">Fall 2022</div>
-          <div>E M 319: Solids{grade}</div>
+          <div>
+            E M 319: Mechanics of Solids (Program and Engineering Computational
+            Methods){grade}
+          </div>
           <div>M E 318M: MATLAB{grade}</div>
           <div>M E 314D: Dynamics {grade}</div>
           <div>UGS 303: Building Winnings Teams{grade}</div>
+        </div>
+        <div className="p-4 w-80">
+          <div className=" mb-[10px] text-3xl ">Spring 2023</div>
+          <div>M E 340: Mechatronics{grade}</div>
+          <div>M E 334: Materials Engineering{grade}</div>
+          <div>M E 330: Fluid Mechanics {grade}</div>
+          <div>M E 140: Mechatronics Lab{grade}</div>
+          <div>M E 134: Materials Engineering Lab {grade}</div>
+          <div>M E 130: Fluid Mechanics Lab {grade}</div>
         </div>
       </div>
     </div>
