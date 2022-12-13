@@ -47,9 +47,9 @@ function Coursework({ grade }) {
           <div>M E 340: Mechatronics{grade}</div>
           <div>M E 334: Materials Engineering{grade}</div>
           <div>M E 330: Fluid Mechanics {grade}</div>
-          <div>M E 140: Mechatronics Lab{grade}</div>
+          <div>M E 140: Mechatronics Lab {grade}</div>
           <div>M E 134: Materials Engineering Lab {grade}</div>
-          <div>M E 130: Fluid Mechanics Lab {grade}</div>
+          <div>M E 130: Fluid Mechanics Lab{grade}</div>
         </div>
       </div>
     </div>
