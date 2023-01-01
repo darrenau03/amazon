@@ -17,7 +17,7 @@ const Projects = () => {
           image={require("../../images/TVC/TREL.png")}
           description="Gimbal mechanism for rocket engine"
           projectDuration={"Jan 2022 - Present"}
-          toolsUsed={"Solidworks, Ansys"}
+          toolsUsed={"Solidworks, Ansys, Arduino"}
           modalHtml={
             <div className="space-y-4 flex flex-col">
               {" "}
@@ -41,48 +41,42 @@ const Projects = () => {
                 </a>
                 .
               </p>
+
+
               <p>
-                The primary requirements of this system was to with stand the
-                15.5 kN thrust of the engine while being able to actuate 5
-                degrees in any direction. The project began with recognizing
-                that the triple ring design would be the most optimal for this
-                situation. This was because the top ring, as well as the bolt
-                pattern of the innermost of the triple ring design had to remain
-                constant. Additionally, this would allow for most of the stress
-                of the engine to be transferred to the supports as opposed to
-                the linear actuator itself, allowing for more flexibility.
+                I'm particularly proud of this project because it was a project I was able to develop alone from the ground up with minimal guidance.
+                For context, since the start of our lab, the primary control system has been actuated fins (fins that rotate to use aerodynamic forces generated from the change in angle of attack to induce torque control over the vehicle). TVC was brought up as a concept as some feared the control authority (or lack thereof) of fins. However, as no development of TVC had been done, many were fearful of the affect to our launch timeline TVC would bring.
+
+                Yet, through design iterations and development, I was eventually able to bring the system to a point where the majority of teams in the lab felt comfortable with it. As of September, it is our primary control system for Halcyon.
               </p>
               <p>
-                While this project is very much still in progress, the design of
-                the TVC system is close to completion. So far, this project has
-                taught me in three main areas
+                The core design of TVC has remained the same throughout the project: three concentric rings, which rotate on different axis, allowing for pitch yaw rotation of the engine that is mounted to the inner most ring, thus enabling the engine to induce a consequent pitch and yaw torque command on our rocket. Other designs were considered but deemed to be too intrusive to the existing designs on the rocket.
               </p>
               <p>
-                <p>1) Improving my Solidworks skills.</p> As this was the
-                largest Solidworks project I've done to date, it required me to
-                learn better organization and CADding practices than before,
-                including primarily mating through reference geometry, sketching
-                primarily through the top, right, and front planes, using folder
-                and equations, creating hotkeys to improve workflow, and more.
+                However, many some factors have changed throughout the development of the system.
+                -most of these come from geometric design: changes that would optimize stiffness, mass, and manufacturability
+                -better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered with a single variable change
               </p>
               <p>
-                <p>2) Learning a bit of solids and dynamics</p> In order to
-                perform hand calcs to spec the linear actuators, bearings,
-                bolts, and to have a general understanding of what Ansys does.
-                It required that I learn solids and dynamics, preparing me for
-                these courses that I will be taking in Fall 2022.{" "}
+                <p class="font-bold">Other work that was required for the design</p>
+                <ul>
+                  <li>-Hand Calcs: basic solids and dynamics question to determine bolt max stress, required angular acceleration, etc</li>
+                  <li>-FEA: to ensure components that don't fail</li>
+                  <li>-Arduino breadboarding and programming: to test the movement of our 3d prototype. There were two circuitries created.
+                    The 1st one is a linear actuator test where the speed of the linear actuator is dependent on the encoder position, modified by setting the PWM signal duty cycle. In the future, we would like the linear actuators to move to a commanded position, which would be done with positional feedback encoders that. As the current actautors don’t have this feature, this encoder integration allows for a rudimentary method to ensure the closed loop feedback would work (having linear actuator dependent on sensors).
+                    The 2nd one is a gimbal range test. This is an open loop program that maps polar coordinates to cartesian. By varying the theta value as a function of time, it allows the actuators to control the system in a rotational motion.</li>
+                  <li>-Forward kinematics calculator: used to determine the actuator lengths as a function of the desired gimbal angles. The system is deterministic, so while the math is not a simple trig function, each linear actuator length value can be mapped as a function of the gimbal angles. This will likely not be implemented for computational purposes (the small angle approximation will suffice), creating the mapping algorithm was good for educational purposes.</li>
+                  <li>-Test Stand Design: this was accomplished by a team I oversaw. It involved creating a dynamic test stand capable of applying the simulated force of the engine without placing the system on the hotfire stand. It works with a high tension cable who's direction of pull is redirected with actuator.</li>
+                </ul>
+
+
+
+
+
               </p>
-              <p>
-                <p>3) Conducting Ansys/FEAs</p> While designing, I would also
-                have to test the components in Ansys to ensure the stress from
-                the engine would cause stress under the yield strength of the
-                component.
-              </p>
-              <p>
-                Unfortunately due to ITAR regulations, most of the work cannot
-                be shared. However, the 3d printed have been approved for public
-                release and displayed below.
-              </p>
+
+
+
               <div className="flex justify-center items-center ">
                 <Function
                   image={
@@ -108,10 +102,14 @@ const Projects = () => {
                 ></Function>
               </div>
               <p>
-                The first video shows the full range of motion of the TVC system
-                gimbaling the engine. The 2nd one show a linear actuator test
-                where the speed of the linear actuator is dependent on the
-                encoder position, modified by setting the PWM signal duty cycle{" "}
+                <a class="font-bold">The biggest problem</a> with the design thus far has been speccing the linear actuators. Bearing friction, tolerance stack up, rotational inertia, vibrations from engine, and pressurized line stiffness were factors I identified would contribute to the required force of the linear actuators, but having a proper account of each one seemed to be near impossible. We plan to resolve this by creating a temporary design with higher safety margin and fire this with the engine and collect data to determine the force requirements.
+              </p>
+              <p>
+                Unfortunately due to ITAR regulations, most of the design work cannot
+                be shared.
+              </p>
+              <p>
+                {" "}
               </p>
               <p>
                 There is still a lot of work to be done but I am very grateful
@@ -132,7 +130,7 @@ const Projects = () => {
                   Instagram
                 </a>
               </p>
-              <p className="text-xs">Progress as of October 2022</p>
+              <p className="text-xs">Progress as of December 2022</p>
             </div>
           }
         />
@@ -198,37 +196,24 @@ const Projects = () => {
           description="Member of LHR Electric Team"
           projectDuration={"Feb 2022-Present"}
           toolsUsed={
-            "lathe, manual mill, 3d printer, laser cutter, drop saw, hand tools"
+            "lathe, manual mill, tig welder, 3d printer, laser cutter, drop saw, hand tools, assisted cnc mill operation"
           }
           modalHtml={
             <div className="space-y-4 flex flex-col">
               <p>
-                I joined {" "}
+                I am a member of our school’s {" "}
                 <a
                   href="https://www.longhornracing.org/electric-vehicle"
                   className=" text-blue-600 hover:text-purple-800"
                 >
                   Longhorn Racing Electric Team
                 </a>
-                {" "} as a dynamics member during the 2021-2022 season, where I helped machine components. This included shims, plugs, jig components, and more. I
-                also helped draft drawings using conventional tolerancing. This
-                opportunity also taught me a lot about vehicle dynamics such as
-                purpose of camber, caster, toe, what an arb was and how it
-                functioned,{" "}
-                <a
-                  href="https://en.wikipedia.org/wiki/Ackermann_steering_geometry"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  Ackermann steering geometry
-                </a>
-                , etc
+                {" "} , where our goal is to design a Formula styled car to compete in in a series of events.
               </p>
-              <p>
-                This year, I'm on the powertrain team, where my role is to help create the lap simulation used to help sweep dynamic parameters and aid component selection.
-                
-              </p>
+              <p>Due to the time I spend on TREL, my involvement in LHRE is less intense. As a general member (dynamics last year, powertrain this year), most of my involvement is helping with miscellaneous tasks, from design/packaging help, FEA analysis, debugging and developing our simulation, creating drawings, machining components, and more. While I don’t have a specific project I have fully immersed myself in, assisting small subtasks here and there has allowed me to become more well-rounded in the skills I gain. It has also allowed me to become familiar with the most of the design considerations and justifications around the vehicle.</p>
             </div>
           }
+
         />
         <ModalTile
           projectName={"HeRo Summer Research"}
@@ -561,7 +546,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                      // className="object-contain w-50px"
+                    // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
@@ -733,7 +718,7 @@ const Projects = () => {
           }
         />
 
-        <ModalTile
+        {/* <ModalTile
           projectName={"Yuumi Bot"}
           image={require("../../images/Yuumi Bot/Yuumi.png")}
           description="An AI bot to play Yuumi in League of Legends"
@@ -777,7 +762,7 @@ const Projects = () => {
               </div>
             </div>
           }
-        />
+        /> */}
 
         <ModalTile
           projectName={"Web Scrapping"}
