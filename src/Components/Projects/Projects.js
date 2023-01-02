@@ -56,7 +56,7 @@ const Projects = () => {
                 However, many some factors have changed throughout the development of the system.
                 <ul>
                   <li>-most of these come from geometric design: changes that would optimize stiffness, mass, cost, and manufacturability</li>
-                  <li>-better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered with a single variable change</li>
+                  <li>-better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered within a single file</li>
                 </ul>
               </p>
               <p>
