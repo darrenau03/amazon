@@ -50,12 +50,14 @@ const Projects = () => {
                 Yet, through design iterations and development, I was eventually able to bring the system to a point where the majority of teams in the lab felt comfortable with it. As of September, it is our primary control system for Halcyon.
               </p>
               <p>
-                The core design of TVC has remained the same throughout the project: three concentric rings, which rotate on different axis, allowing for pitch yaw rotation of the engine that is mounted to the inner most ring, thus enabling the engine to induce a consequent pitch and yaw torque command on our rocket. Other designs were considered but deemed to be too intrusive to the existing designs on the rocket.
+                The core design of TVC has remained the same throughout the project: three concentric rings, which rotate on different axis through electric linear actuators, allowing for pitch yaw rotation of the engine that is mounted to the inner most ring, thus enabling the engine to induce a consequent pitch and yaw torque command on our rocket. Other designs were considered but deemed to be too intrusive to the existing designs on the rocket.
               </p>
               <p>
                 However, many some factors have changed throughout the development of the system.
-                -most of these come from geometric design: changes that would optimize stiffness, mass, and manufacturability
-                -better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered with a single variable change
+                <ul>
+                  <li>-most of these come from geometric design: changes that would optimize stiffness, mass, cost, and manufacturability</li>
+                  <li>-better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered with a single variable change</li>
+                </ul>
               </p>
               <p>
                 <p class="font-bold">Other work that was required for the design</p>
@@ -68,11 +70,6 @@ const Projects = () => {
                   <li>-Forward kinematics calculator: used to determine the actuator lengths as a function of the desired gimbal angles. The system is deterministic, so while the math is not a simple trig function, each linear actuator length value can be mapped as a function of the gimbal angles. This will likely not be implemented for computational purposes (the small angle approximation will suffice), creating the mapping algorithm was good for educational purposes.</li>
                   <li>-Test Stand Design: this was accomplished by a team I oversaw. It involved creating a dynamic test stand capable of applying the simulated force of the engine without placing the system on the hotfire stand. It works with a high tension cable who's direction of pull is redirected with actuator.</li>
                 </ul>
-
-
-
-
-
               </p>
 
 
