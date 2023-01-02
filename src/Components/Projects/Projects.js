@@ -640,6 +640,9 @@ const Projects = () => {
             <div className="space-y-4 flex flex-col">
               <p> I think most of it speaks for itself :)</p>
               <p>
+                Written with Javasciprt, TailwindCSS, ReactJS, and hosted on AWS.
+              </p>
+              <p>
                 {" "}
                 <a
                   href="https://github.com/darrenau03/amazon"
