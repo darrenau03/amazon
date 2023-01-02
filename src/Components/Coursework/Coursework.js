@@ -35,10 +35,10 @@ function Coursework({ grade }) {
         <div className="p-4 w-80">
           <div className=" mb-[10px] text-3xl ">Fall 2022</div>
           <div>
-            E M 319: Mechanics of Solids (Program and Engineering Computational
-            Methods){grade}
+            E M 319: Mechanics of Solids{grade}
           </div>
-          <div>M E 318M: MATLAB{grade}</div>
+          <div>M E 318M: MATLAB (Program and Engineering Computational
+            Methods){grade}</div>
           <div>M E 314D: Dynamics {grade}</div>
           <div>UGS 303: Building Winnings Teams{grade}</div>
         </div>
