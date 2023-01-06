@@ -85,6 +85,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Full Range Motion Gimbal"}
+                  video = {true}
                 ></Function>
                 <Function
                   image={
@@ -96,6 +97,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Linear Actuator Encoder Test"}
+                  video = {true}
                 ></Function>
               </div>
               <p>
