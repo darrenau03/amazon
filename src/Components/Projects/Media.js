@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ExpandedImage from "./ExpandedImage";
 
-const Function = ({ image, caption, video }) => {
+const Media = ({ image, caption, video }) => {
   const [imageOn, setImageOn] = useState(false); //current state,
   const clicked = () => {
     setImageOn(true);
@@ -40,4 +40,4 @@ const Function = ({ image, caption, video }) => {
   
 };
 
-export default Function;
+export default Media;

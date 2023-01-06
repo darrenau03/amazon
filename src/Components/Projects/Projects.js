@@ -1,6 +1,6 @@
 import React from "react";
 import ModalTile from "./ModalTile";
-import Function from "./Function";
+import Media from "./Media";
 
 const Projects = () => {
   return (
@@ -75,7 +75,7 @@ const Projects = () => {
 
 
               <div className="flex justify-center items-center ">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -86,8 +86,8 @@ const Projects = () => {
                   }
                   caption={"Full Range Motion Gimbal"}
                   video = {true}
-                ></Function>
-                <Function
+                ></Media>
+                <Media
                   image={
                     <video
                       controls
@@ -98,7 +98,7 @@ const Projects = () => {
                   }
                   caption={"Linear Actuator Encoder Test"}
                   video = {true}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 <a class="font-bold">The biggest problem</a> with the design thus far has been speccing the linear actuators. Bearing friction, tolerance stack up, rotational inertia, vibrations from engine, and pressurized line stiffness were factors I identified would contribute to the required force of the linear actuators, but having a proper account of each one seemed to be near impossible. We plan to resolve this by creating a temporary design with higher safety margin and fire this with the engine and collect data to determine the force requirements.
@@ -288,7 +288,7 @@ const Projects = () => {
                 motion.
               </p>
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <img
                       src={require("../../images/HeRo/CAD.png")}
@@ -296,8 +296,8 @@ const Projects = () => {
                     />
                   }
                   caption={"CAD"}
-                ></Function>
-                <Function
+                ></Media>
+                <Media
                   image={
                     <img
                       src={require("../../images/HeRo/AntiRollJig.png")}
@@ -305,7 +305,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Jig"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 The results after running the algorithm on a couple rings are
@@ -313,7 +313,7 @@ const Projects = () => {
               </p>
               <p>
                 <div className="flex justify-center">
-                  <Function
+                  <Media
                     image={
                       <img
                         src={require("../../images/HeRo/ring id.jpg")}
@@ -321,8 +321,8 @@ const Projects = () => {
                       />
                     }
                     caption={"Ring Internal Diameter"}
-                  ></Function>
-                  <Function
+                  ></Media>
+                  <Media
                     image={
                       <img
                         src={require("../../images/HeRo/ring od.jpg")}
@@ -330,8 +330,8 @@ const Projects = () => {
                       />
                     }
                     caption={"Ring Outer Diameter"}
-                  ></Function>
-                  <Function
+                  ></Media>
+                  <Media
                     image={
                       <img
                         src={require("../../images/HeRo/tape id.jpg")}
@@ -339,8 +339,8 @@ const Projects = () => {
                       />
                     }
                     caption={"Tape Internal Diameter"}
-                  ></Function>
-                  <Function
+                  ></Media>
+                  <Media
                     image={
                       <img
                         src={require("../../images/HeRo/tape od.jpg")}
@@ -348,10 +348,10 @@ const Projects = () => {
                       />
                     }
                     caption={"Tape Outer Diameter"}
-                  ></Function>
+                  ></Media>
                 </div>
                 <div className="flex justify-center items-center ">
-                  <Function
+                  <Media
                     image={
                       <img
                         src={require("../../images/HeRo/Graphs.png")}
@@ -361,9 +361,9 @@ const Projects = () => {
                     caption={
                       "Graphs of the ID and OD: X is time in seconds and Y is diameter in inches"
                     }
-                  ></Function>
+                  ></Media>
 
-                  <Function
+                  <Media
                     image={
                       <video
                         controls
@@ -373,7 +373,8 @@ const Projects = () => {
                       />
                     }
                     caption={"Video correlation to graph"}
-                  ></Function>
+                    video = {true}
+                  ></Media>
                 </div>
               </p>
               <p>
@@ -391,7 +392,7 @@ const Projects = () => {
                 parameters needed to undistort the image.
               </p>
               <div className="flex justify-center items-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -403,8 +404,9 @@ const Projects = () => {
                   caption={
                     "Undistorting Code: recognizes the checkerboard and undistorts the camera output"
                   }
-                ></Function>
-                <Function
+                  video = {true}
+                ></Media>
+                <Media
                   image={
                     <img
                       src={require("../../images/HeRo/AntiDistortion.png")}
@@ -412,7 +414,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Results"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 If you expand the above image, you can see that the edges of the
@@ -494,7 +496,7 @@ const Projects = () => {
               </p>
 
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -506,11 +508,12 @@ const Projects = () => {
                   caption={
                     "Animation: angle flipped because downwards was positive for this 3DOF animation block"
                   }
-                ></Function>
+                  video = {true}
+                ></Media>
               </div>
 
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <img
                       src={require("../../images/1DOF/Kinematic.png")}
@@ -518,7 +521,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Kinematics Graph"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 The 1DOF can be validated using by analyzing the graphs. The
@@ -540,7 +543,7 @@ const Projects = () => {
               </p>
 
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <img
                       src={require("../../images/1DOF/Scope.png")}
@@ -549,7 +552,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
-                ></Function>
+                ></Media>
               </div>
 
               <a
@@ -603,7 +606,7 @@ const Projects = () => {
                   <video controls src={video} />{" "}
                 </div>{" "} */}
 
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -613,7 +616,8 @@ const Projects = () => {
                     />
                   }
                   caption={"Demo (I am bad at this game)"}
-                ></Function>
+                  video = {true}
+                ></Media>
               </div>
               <p>
                 {" "}
@@ -693,7 +697,7 @@ const Projects = () => {
                 consideration.
               </p>
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -702,9 +706,10 @@ const Projects = () => {
                       }
                     />
                   }
+                  video = {true}
                   caption={"WebScrap/Data Save"}
-                ></Function>
-                <Function
+                ></Media>
+                <Media
                   image={
                     <video
                       controls
@@ -713,8 +718,9 @@ const Projects = () => {
                       }
                     />
                   }
+                  video = {true}
                   caption={"UserInput/Calculations"}
-                ></Function>
+                ></Media>
               </div>
             </div>
           }
@@ -788,7 +794,7 @@ const Projects = () => {
                   <video controls src={video} />{" "}
                 </div>{" "} */}
 
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -797,8 +803,9 @@ const Projects = () => {
                       }
                     />
                   }
+                  video = {true}
                   caption={"Demo"}
-                ></Function>
+                ></Media>
               </div>
             </div>
           }
@@ -822,7 +829,7 @@ const Projects = () => {
                 webserver hosted using an ESP8266 Wi-Fi microchip.
               </p>
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -831,8 +838,9 @@ const Projects = () => {
                       }
                     />
                   }
+                  video = {true}
                   caption={"Ultrasonic Demo"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 The ultrasonic sensor will point at the door and the value will
@@ -843,7 +851,7 @@ const Projects = () => {
                 in there.
               </p>
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -852,8 +860,9 @@ const Projects = () => {
                       }
                     />
                   }
+                  video = {true}
                   caption={"Humidity Demo"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 There is a humidity sensor as well that will go up if the
@@ -862,7 +871,7 @@ const Projects = () => {
                 there for a while.
               </p>
               <div className="flex justify-center">
-                <Function
+                <Media
                   image={
                     <video
                       controls
@@ -870,9 +879,11 @@ const Projects = () => {
                         "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/light.mp4"
                       }
                     />
+                    
                   }
+                  video = {true}
                   caption={"Humidity Demo"}
-                ></Function>
+                ></Media>
               </div>
               <p>
                 There is also a light switch that can be controlled from the
