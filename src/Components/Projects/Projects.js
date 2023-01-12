@@ -41,39 +41,94 @@ const Projects = () => {
                 </a>
                 .
               </p>
-
-
               <p>
-                I'm particularly proud of this project because it was a project I was able to develop alone from the ground up with minimal guidance.
-                For context, since the start of our lab, the primary control system has been actuated fins (fins that rotate to use aerodynamic forces generated from the change in angle of attack to induce torque control over the vehicle). TVC was brought up as a concept as some feared the control authority (or lack thereof) of fins. However, as no development of TVC had been done, many were fearful of the affect to our launch timeline TVC would bring.
-
-                Yet, through design iterations and development, I was eventually able to bring the system to a point where the majority of teams in the lab felt comfortable with it. As of September, it is our primary control system for Halcyon.
+                I'm particularly proud of this project because it was a project
+                I was able to develop alone from the ground up with minimal
+                guidance. For context, since the start of our lab, the primary
+                control system has been actuated fins (fins that rotate to use
+                aerodynamic forces generated from the change in angle of attack
+                to induce torque control over the vehicle). TVC was brought up
+                as a concept as some feared the control authority (or lack
+                thereof) of fins. However, as no development of TVC had been
+                done, many were fearful of the affect to our launch timeline TVC
+                would bring. Yet, through design iterations and development, I
+                was eventually able to bring the system to a point where the
+                majority of teams in the lab felt comfortable with it. As of
+                September, it is our primary control system for Halcyon.
               </p>
               <p>
-                The core design of TVC has remained the same throughout the project: three concentric rings, which rotate on different axis through electric linear actuators, allowing for pitch yaw rotation of the engine that is mounted to the inner most ring, thus enabling the engine to induce a consequent pitch and yaw torque command on our rocket. Other designs were considered but deemed to be too intrusive to the existing designs on the rocket.
+                The core design of TVC has remained the same throughout the
+                project: three concentric rings, which rotate on different axis
+                through electric linear actuators, allowing for pitch yaw
+                rotation of the engine that is mounted to the inner most ring,
+                thus enabling the engine to induce a consequent pitch and yaw
+                torque command on our rocket. Other designs were considered but
+                deemed to be too intrusive to the existing designs on the
+                rocket.
               </p>
               <p>
-                However, many some factors have changed throughout the development of the system.
+                However, many some factors have changed throughout the
+                development of the system.
                 <ul>
-                  <li>-most of these come from geometric design: changes that would optimize stiffness, mass, cost, and manufacturability</li>
-                  <li>-better CAD practice: specifically using a 3d sketch that all geometry is created and mated off of, allowing for parameters within the assembly to be altered within a single file</li>
+                  <li>
+                    -most of these come from geometric design: changes that
+                    would optimize stiffness, mass, cost, and manufacturability
+                  </li>
+                  <li>
+                    -better CAD practice: specifically using a 3d sketch that
+                    all geometry is created and mated off of, allowing for
+                    parameters within the assembly to be altered within a single
+                    file
+                  </li>
                 </ul>
               </p>
               <p>
-                <p class="font-bold">Other work that was required for the design</p>
+                <p class="font-bold">
+                  Other work that was required for the design
+                </p>
                 <ul>
-                  <li>-Hand Calcs: basic solids and dynamics question to determine bolt max stress, required angular acceleration, etc</li>
+                  <li>
+                    -Hand Calcs: basic solids and dynamics question to determine
+                    bolt max stress, required angular acceleration, etc
+                  </li>
                   <li>-FEA: to ensure components that don't fail</li>
-                  <li>-Arduino breadboarding and programming: to test the movement of our 3d prototype. There were two circuitries created.
-                    The 1st one is a linear actuator test where the speed of the linear actuator is dependent on the encoder position, modified by setting the PWM signal duty cycle. In the future, we would like the linear actuators to move to a commanded position, which would be done with positional feedback encoders that. As the current actautors don’t have this feature, this encoder integration allows for a rudimentary method to ensure the closed loop feedback would work (having linear actuator dependent on sensors).
-                    The 2nd one is a gimbal range test. This is an open loop program that maps polar coordinates to cartesian. By varying the theta value as a function of time, it allows the actuators to control the system in a rotational motion.</li>
-                  <li>-Forward kinematics calculator: used to determine the actuator lengths as a function of the desired gimbal angles. The system is deterministic, so while the math is not a simple trig function, each linear actuator length value can be mapped as a function of the gimbal angles. This will likely not be implemented for computational purposes (the small angle approximation will suffice), creating the mapping algorithm was good for educational purposes.</li>
-                  <li>-Test Stand Design: this was accomplished by a team I oversaw. It involved creating a dynamic test stand capable of applying the simulated force of the engine without placing the system on the hotfire stand. It works with a high tension cable who's direction of pull is redirected with actuator.</li>
+                  <li>
+                    -Arduino breadboarding and programming: to test the movement
+                    of our 3d prototype. There were two circuitries created. The
+                    1st one is a linear actuator test where the speed of the
+                    linear actuator is dependent on the encoder position,
+                    modified by setting the PWM signal duty cycle. In the
+                    future, we would like the linear actuators to move to a
+                    commanded position, which would be done with positional
+                    feedback encoders that. As the current actautors don’t have
+                    this feature, this encoder integration allows for a
+                    rudimentary method to ensure the closed loop feedback would
+                    work (having linear actuator dependent on sensors). The 2nd
+                    one is a gimbal range test. This is an open loop program
+                    that maps polar coordinates to cartesian. By varying the
+                    theta value as a function of time, it allows the actuators
+                    to control the system in a rotational motion.
+                  </li>
+                  <li>
+                    -Forward kinematics calculator: used to determine the
+                    actuator lengths as a function of the desired gimbal angles.
+                    The system is deterministic, so while the math is not a
+                    simple trig function, each linear actuator length value can
+                    be mapped as a function of the gimbal angles. This will
+                    likely not be implemented for computational purposes (the
+                    small angle approximation will suffice), creating the
+                    mapping algorithm was good for educational purposes.
+                  </li>
+                  <li>
+                    -Test Stand Design: this was accomplished by a team I
+                    oversaw. It involved creating a dynamic test stand capable
+                    of applying the simulated force of the engine without
+                    placing the system on the hotfire stand. It works with a
+                    high tension cable who's direction of pull is redirected
+                    with actuator.
+                  </li>
                 </ul>
               </p>
-
-
-
               <div className="flex justify-center items-center ">
                 <Media
                   image={
@@ -85,7 +140,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Full Range Motion Gimbal"}
-                  video = {true}
+                  video={true}
                 ></Media>
                 <Media
                   image={
@@ -97,19 +152,25 @@ const Projects = () => {
                     />
                   }
                   caption={"Linear Actuator Encoder Test"}
-                  video = {true}
+                  video={true}
                 ></Media>
               </div>
               <p>
-                <a class="font-bold">The biggest problem</a> with the design thus far has been speccing the linear actuators. Bearing friction, tolerance stack up, rotational inertia, vibrations from engine, and pressurized line stiffness were factors I identified would contribute to the required force of the linear actuators, but having a proper account of each one seemed to be near impossible. We plan to resolve this by creating a temporary design with higher safety margin and fire this with the engine and collect data to determine the force requirements.
+                <a class="font-bold">The biggest problem</a> with the design
+                thus far has been speccing the linear actuators. Bearing
+                friction, tolerance stack up, rotational inertia, vibrations
+                from engine, and pressurized line stiffness were factors I
+                identified would contribute to the required force of the linear
+                actuators, but having a proper account of each one seemed to be
+                near impossible. We plan to resolve this by creating a temporary
+                design with higher safety margin and fire this with the engine
+                and collect data to determine the force requirements.
               </p>
               <p>
-                Unfortunately due to ITAR regulations, most of the design work cannot
-                be shared.
+                Unfortunately due to ITAR regulations, most of the design work
+                cannot be shared.
               </p>
-              <p>
-                {" "}
-              </p>
+              <p> </p>
               <p>
                 There is still a lot of work to be done but I am very grateful
                 for this opportunity and excited to watch this project progress.
@@ -200,19 +261,30 @@ const Projects = () => {
           modalHtml={
             <div className="space-y-4 flex flex-col">
               <p>
-                I am a member of our school’s {" "}
+                I am a member of our school’s{" "}
                 <a
                   href="https://www.longhornracing.org/electric-vehicle"
                   className=" text-blue-600 hover:text-purple-800"
                 >
                   Longhorn Racing Electric Team
-                </a>
-                {" "} , where our goal is to design a Formula styled car to compete in in a series of events.
+                </a>{" "}
+                , where our goal is to design a Formula styled car to compete in
+                in a series of events.
               </p>
-              <p>Due to the time I spend on TREL, my involvement in LHRE is less intense. As a general member (dynamics last year, powertrain this year), most of my involvement is helping with miscellaneous tasks, from design/packaging help, FEA analysis, debugging and developing our simulation, creating drawings, machining components, and more. While I don’t have a specific project I have fully immersed myself in, assisting small subtasks here and there has allowed me to become more well-rounded in the skills I gain. It has also allowed me to become familiar with the most of the design considerations and justifications around the vehicle.</p>
+              <p>
+                Due to the time I spend on TREL, my involvement in LHRE is less
+                intense. As a general member (dynamics last year, powertrain
+                this year), most of my involvement is helping with miscellaneous
+                tasks, from design/packaging help, FEA analysis, debugging and
+                developing our simulation, creating drawings, machining
+                components, and more. While I don’t have a specific project I
+                have fully immersed myself in, assisting small subtasks here and
+                there has allowed me to become more well-rounded in the skills I
+                gain. It has also allowed me to become familiar with the most of
+                the design considerations and justifications around the vehicle.
+              </p>
             </div>
           }
-
         />
         <ModalTile
           projectName={"HeRo Summer Research"}
@@ -373,7 +445,7 @@ const Projects = () => {
                       />
                     }
                     caption={"Video correlation to graph"}
-                    video = {true}
+                    video={true}
                   ></Media>
                 </div>
               </p>
@@ -404,7 +476,7 @@ const Projects = () => {
                   caption={
                     "Undistorting Code: recognizes the checkerboard and undistorts the camera output"
                   }
-                  video = {true}
+                  video={true}
                 ></Media>
                 <Media
                   image={
@@ -508,7 +580,7 @@ const Projects = () => {
                   caption={
                     "Animation: angle flipped because downwards was positive for this 3DOF animation block"
                   }
-                  video = {true}
+                  video={true}
                 ></Media>
               </div>
 
@@ -548,7 +620,7 @@ const Projects = () => {
                     <img
                       src={require("../../images/1DOF/Scope.png")}
                       alt={"Scope"}
-                    // className="object-contain w-50px"
+                      // className="object-contain w-50px"
                     />
                   }
                   caption={"Drag, Mass, and Thrust Graph"}
@@ -616,7 +688,7 @@ const Projects = () => {
                     />
                   }
                   caption={"Demo (I am bad at this game)"}
-                  video = {true}
+                  video={true}
                 ></Media>
               </div>
               <p>
@@ -643,7 +715,8 @@ const Projects = () => {
             <div className="space-y-4 flex flex-col">
               <p> I think most of it speaks for itself :)</p>
               <p>
-                Written with Javasciprt, TailwindCSS, ReactJS, and hosted on AWS.
+                Written with Javasciprt, TailwindCSS, ReactJS, and hosted on
+                AWS.
               </p>
               <p>
                 {" "}
@@ -667,6 +740,66 @@ const Projects = () => {
                 for a decent amount of inspiration.
               </p>
               <p></p>
+            </div>
+          }
+        />
+        <ModalTile
+          projectName={"JetBot"}
+          image={require("../../images/JetBot/jetbot.png")}
+          description="AI Robot Car"
+          projectDuration={"Aug 2022"}
+          toolsUsed={"Pytorch, Jupyter Notebook, Python, Jetson Nano"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                With my experience in machine learning and computer vision, I
+                wanted to pursue a project that allowed me to implement that
+                knowledge into my interest in automation and controls.
+              </p>
+              <p>
+                To accomplish this, I bought a JetBot. It is essentially a kit
+                that uses a Jetson Nano as a microprocessor, is connected to a
+                chassis, and has a camera and wifi/Bluetooth capabilities.
+              </p>
+              <p>
+                The project I did serve to prevent collisions. We began by
+                collecting a dataset by taking pictures of open areas, and areas
+                defined as blocked. The images were split into a training and
+                testing dataset and run through a classification neural network
+                to create a model that is able to classify the test dataset to
+                95%+ accuracy. This model was then run actively on the jetbot by
+                the computing power of the jetson nano while the robot drove
+                around the room. It would feed the camera data into the model
+                and output a prediction on the likely hood that the output was
+                blocked. If the probability was over 50%, it would turn in place
+                until it would identify that the area in front of it is clear,
+                and proceed.
+              </p>
+              <p>
+                This project was cool because it allowed me to experiment with
+                all the machine learning and perception techniques I learned in
+                previous projects on a real-time system. While most of the code
+                was taken from all the preexisting documentation of the JetBot,
+                learning to get the physical hardware working was a unique
+                experience.
+              </p>
+
+              <div className="flex justify-center">
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/JetBot.mp4"
+                      }
+                    />
+                  }
+                  video={true}
+                  caption={
+                    " Example video: the vertical slider determines the blocked probability."
+                  }
+                ></Media>
+              </div>
             </div>
           }
         />
@@ -706,7 +839,7 @@ const Projects = () => {
                       }
                     />
                   }
-                  video = {true}
+                  video={true}
                   caption={"WebScrap/Data Save"}
                 ></Media>
                 <Media
@@ -718,7 +851,7 @@ const Projects = () => {
                       }
                     />
                   }
-                  video = {true}
+                  video={true}
                   caption={"UserInput/Calculations"}
                 ></Media>
               </div>
@@ -803,7 +936,7 @@ const Projects = () => {
                       }
                     />
                   }
-                  video = {true}
+                  video={true}
                   caption={"Demo"}
                 ></Media>
               </div>
@@ -838,7 +971,7 @@ const Projects = () => {
                       }
                     />
                   }
-                  video = {true}
+                  video={true}
                   caption={"Ultrasonic Demo"}
                 ></Media>
               </div>
@@ -860,7 +993,7 @@ const Projects = () => {
                       }
                     />
                   }
-                  video = {true}
+                  video={true}
                   caption={"Humidity Demo"}
                 ></Media>
               </div>
@@ -879,9 +1012,8 @@ const Projects = () => {
                         "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/light.mp4"
                       }
                     />
-                    
                   }
-                  video = {true}
+                  video={true}
                   caption={"Humidity Demo"}
                 ></Media>
               </div>
