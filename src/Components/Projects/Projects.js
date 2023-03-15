@@ -832,7 +832,7 @@ const Projects = () => {
                     />
                   }
                   video={true}
-                  caption={"Detection Demo"}
+                  caption={"Gameplay Demo"}
                 ></Media>
               </div>
               <p>
