@@ -744,6 +744,143 @@ const Projects = () => {
           }
         />
         <ModalTile
+          projectName={"Yuumi Bot"}
+          image={require("../../images/Yuumi Bot/Yuumi.png")}
+          description="An AI bot to play Yuumi in League of Legends"
+          projectDuration={"July 2021"}
+          toolsUsed={"Python"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                As the description says, I made an AI bot to play the character
+                Yuumi in League of Legends using Python. In the past, I made a
+                version that relied solely on image matching in AutoHotKey. This
+                works by having a set of stored images and seeing if any of them
+                matched with current images on the screen. If they did, this
+                would allow the bot to know what state the game was currently in
+                and send inputs accordingly. However, this would mean that any
+                character that moved moderately would be impossible to detect.
+              </p>
+              <p>
+                The core functionality of the code still works in the same way
+                as before. However, instead of needing the images to match
+                perfectly, it relies on OpenCV's{" "}
+                <a
+                  href="https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  MatchTemplate
+                </a>{" "}
+                function that returns a confidence depending on the similarities
+                of the images. Applying a threshold to this, we're able to have
+                a margin for error in image differences.{" "}
+              </p>
+              <p>
+                The coolest part of the bot, however, is the image recognition
+                AI. Using the{" "}
+                <a
+                  href="https://github.com/ultralytics/yolov5"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  YOLOv5 architecture
+                </a>
+                . By feeding in a dataset of images with labeled bounding boxes,
+                the model is able to learn to detect the objects in the images.{" "}
+                <div className="flex justify-center">
+                  <Media
+                    image={
+                      <video
+                        controls
+                        src={
+                          "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/YuumiBot2.mp4"
+                        }
+                      />
+                    }
+                    video={true}
+                    caption={"Labeling Sample Images"}
+                  ></Media>
+                  <Media
+                    image={
+                      <video
+                        controls
+                        src={
+                          "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/YuumiBot1.mp4"
+                        }
+                      />
+                    }
+                    video={true}
+                    caption={"Detection Demo"}
+                  ></Media>
+                </div>
+              </p>
+              <p>
+                Shown above is a demonstration of the algorithm. The left video
+                shows the process of labeling the images. All the labels are
+                tabulated on the right side, indicating what each box
+                corresponds to. The right video shows the detection of the
+                images on a sample video. As seen, the algorithm detects the the
+                results fairly accurately despite a low sample set of 49 images.
+              </p>
+              <div className="flex justify-center">
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/YuumiBot3.mp4"
+                      }
+                    />
+                  }
+                  video={true}
+                  caption={"Detection Demo"}
+                ></Media>
+              </div>
+              <p>
+                Above, is a gameplay demonstration. After pressing F7, which
+                turns on the bot, all other keyboard input is performed by the
+                python script.
+              </p>
+
+              <p>
+                The code works with 4 simultaneous threads. One constantly
+                displays the screen with a bounding box around the identified
+                objects. The other one controls the state of the bot by having a
+                keyboard listener, toggling between on off when the key is
+                pressed. The third one controls the bot, reading images from the
+                1st thread, and making decisions based on the results of that,
+                including calculating the location of the detected enemy and
+                shoot abilities in that direction and placing wards in detected
+                bushes. The last thread runs at a different clock rate as the
+                3rd one, and determines when to switch teammates.
+              </p>
+              <p>
+                Future Plans: currently, as it performs both the yolov5 model
+                detection along with MatchTemplate, the performance is fairly
+                laggy. I hope to add more labeled classes with a larger dataset
+                while training the neural network such that the yolov5 can
+                detect all possible features on a screen, cutting down
+                computational cost.{" "}
+              </p>
+              <p>
+                Overall, this was a pretty cool experience. Despite having coded
+                for quite some time, this was my first experience working with
+                threads. The live computer vision was also a fun experiment and
+                something I forsee being very useful for any future robotics
+                applications.
+              </p>
+              <p>
+                The code is linked here:{" "}
+                <a
+                  href="https://github.com/darrenau03/yuumi-bot"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  GitHub
+                </a>
+              </p>
+            </div>
+          }
+        />
+        <ModalTile
           projectName={"JetBot"}
           image={require("../../images/JetBot/jetbot.png")}
           description="AI Robot Car"
@@ -858,52 +995,6 @@ const Projects = () => {
             </div>
           }
         />
-
-        {/* <ModalTile
-          projectName={"Yuumi Bot"}
-          image={require("../../images/Yuumi Bot/Yuumi.png")}
-          description="An AI bot to play Yuumi in League of Legends"
-          projectDuration={"July 2021"}
-          toolsUsed={"AutoHotKey"}
-          modalHtml={
-            <div className="space-y-4 flex flex-col">
-              <p>
-                As the description says, I made an AI bot to play the character
-                Yuumi in League of Legends using AutoHotKey. It is a{" "}
-                <a
-                  href="https://en.wikipedia.org/wiki/Finite-state_machine"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  Finite-state machine
-                </a>{" "}
-                created by dissecting the game into states. The inputs are
-                determined using the pixel recognition function of AutoHotKey,
-                as Riot Games does not offer their own API.
-              </p>
-              <div className="flex justify-center">
-                <Function
-                  image={
-                    <img
-                      src={require("../../images/Yuumi Bot/FSM.png")}
-                      alt={"FSM"}
-                    />
-                  }
-                  caption={"Finite State Machine Graph"}
-                ></Function>
-              </div>
-              <div className="">
-                <a
-                  href={require("../../images/Yuumi Bot/Yuumi 1080.ahk")}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="text-blue-600 hover:text-purple-800"
-                >
-                  The AutoHotKey Script
-                </a>
-              </div>
-            </div>
-          }
-        /> */}
 
         <ModalTile
           projectName={"Web Scrapping"}
