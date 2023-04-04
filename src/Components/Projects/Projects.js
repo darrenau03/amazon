@@ -643,7 +643,7 @@ const Projects = () => {
         <ModalTile
           projectName={"Connect 4"}
           image={require("../../images/Connect4/C4.png")}
-          description="1DOF Rocket Simulation"
+          description="Connect 4 Game"
           projectDuration={"June 2021"}
           toolsUsed={"Java, JavaFX"}
           modalHtml={
