@@ -84,23 +84,23 @@ const Projects = () => {
               </p>
               <p>
                 <p class="font-bold">
-                  Other work that was required for the design
+                  Some of the work I've done / things I've learned through tackling this project
                 </p>
                 <ul>
                   <li>
                     -Hand Calcs: basic solids and dynamics question to determine
                     bolt max stress, required angular acceleration, etc
                   </li>
-                  <li>-FEA: to ensure components that don't fail</li>
+                  <li>-FEA: modeling boundary conditions</li>
                   <li>
                     -Arduino breadboarding and programming: to test the movement
-                    of our 3d prototype. There were two circuitries created. The
+                    of our 3d prototype. There were two circuities created. The
                     1st one is a linear actuator test where the speed of the
                     linear actuator is dependent on the encoder position,
                     modified by setting the PWM signal duty cycle. In the
                     future, we would like the linear actuators to move to a
                     commanded position, which would be done with positional
-                    feedback encoders that. As the current actautors don’t have
+                    feedback encoders that. As the current actuators don’t have
                     this feature, this encoder integration allows for a
                     rudimentary method to ensure the closed loop feedback would
                     work (having linear actuator dependent on sensors). The 2nd
@@ -135,7 +135,19 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC5.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC1.mp4"
+                      }
+                    />
+                  }
+                  caption={"LabVIEW VI Test"}
+                  video={true}
+                ></Media>
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC2.mp4"
                       }
                     />
                   }
@@ -147,7 +159,7 @@ const Projects = () => {
                     <video
                       controls
                       src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC6.mp4"
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC3.mp4"
                       }
                     />
                   }
@@ -162,9 +174,11 @@ const Projects = () => {
                 from engine, and pressurized line stiffness were factors I
                 identified would contribute to the required force of the linear
                 actuators, but having a proper account of each one seemed to be
-                near impossible. We plan to resolve this by creating a temporary
-                design with higher safety margin and fire this with the engine
-                and collect data to determine the force requirements.
+                near impossible. The original plan was to determine these
+                numbers through numerical testing, but through an industry
+                mentor, we were able to derive a calculator that assumed
+                multiple worst case scenarios and safety margins to come up with
+                a number.
               </p>
               <p>
                 Unfortunately due to ITAR regulations, most of the design work
