@@ -2,7 +2,14 @@ import React from "react";
 import { useState } from "react";
 import Modal from "./Modal";
 
-const ModalTile = ({ projectName, image, description, modalHtml, projectDuration, toolsUsed}) => {
+const ModalTile = ({
+  projectName,
+  image,
+  description,
+  modalHtml,
+  projectDuration,
+  toolsUsed,
+}) => {
   const [modalOn, setModalOn] = useState(false); //current state,
   const [, setChoice] = useState(false);
 
@@ -21,7 +28,11 @@ const ModalTile = ({ projectName, image, description, modalHtml, projectDuration
           {projectName}
         </div>
         <div className="flex justify-center">
-          <img src={image}  alt="asdf" className="object-scale-down mt-5 mb-5 rounded " />
+          <img
+            src={image}
+            alt="asdf"
+            className="object-scale-down mt-5 mb-5 rounded "
+          />
         </div>
         <div className="flex text-sm items text-center justify-center">
           {description}
@@ -33,7 +44,7 @@ const ModalTile = ({ projectName, image, description, modalHtml, projectDuration
           setModalOn={setModalOn}
           setChoice={setChoice}
           modalHtml={modalHtml}
-          projectDuration= {projectDuration}
+          projectDuration={projectDuration}
           projectName={projectName}
           toolsUsed={toolsUsed}
         />
