@@ -12,7 +12,7 @@ export default function App() {
       {/* <Helmet>
         <style>{"body { background-color: #7F8487; }"}</style>
       </Helmet> */}
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center w-full m-0">
         <div className="flex flex-col justify-center w-full">
           <Navbar/>
           <div className="flex justify-center bg-[#dee2e6]">
