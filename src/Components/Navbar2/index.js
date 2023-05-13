@@ -21,8 +21,6 @@ export function Navbar(props) {
           {isMobile && <MobileNavLinks />}
         </div>
       </div>
-      
     </div>
-    
   );
 }

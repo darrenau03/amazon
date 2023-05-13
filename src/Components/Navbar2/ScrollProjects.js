@@ -11,15 +11,17 @@ function findPos(obj) {
   }
 }
 
-export default function ScrollProjects() {
+export default function ScrollProjects({ toggleFunction }) {
   return (
+    // onClick={clicked(toggle)}
     <div
-      onClick={() =>
+      onClick={() => {
         window.scrollTo({
           top: findPos(document.getElementById("proj")) - 60,
           behavior: "smooth",
-        })
-      }
+        });
+        toggleFunction();
+      }}
     >
       <div className="hover:bg-sky-700 rounded-lg flex mr-5 ml-5">
         {/* <PuzzleIcon className=" flex max-w-[20px] fill-[#495057]  mr-2 rounded-md "></PuzzleIcon> */}

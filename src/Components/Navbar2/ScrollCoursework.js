@@ -10,15 +10,16 @@ function findPos(obj) {
   }
 }
 
-export default function ScrollCoursework() {
+export default function ScrollCoursework({ toggleFunction }) {
   return (
     <div
-      onClick={() =>
+      onClick={() => {
         window.scrollTo({
           top: findPos(document.getElementById("cw")) - 60,
           behavior: "smooth",
-        })
-      }
+        });
+        toggleFunction();
+      }}
     >
       <div className=" hover:bg-sky-700 flex rounded-lg mr-5 ml-5">
         {/* <ClipboardIcon className="flex max-w-[20px] mr-2 rounded-md fill-[#495057]"></ClipboardIcon> */}

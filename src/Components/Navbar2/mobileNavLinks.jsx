@@ -14,17 +14,8 @@ export function MobileNavLinks(props) {
   };
 
   return (
-    <div className="flex flex-col justify-end border-4">
-      {/* <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} /> */}
-      <OpenMenu/>
-      {/* {isOpen && (
-        <ul className="m-0 p-0 bg-white fixed top-16 right-0 h-full w-6/12">
-          <div className="flex flex-col space-y-4 mt-9 ">
-            <ScrollProjects />
-            <ScrollCoursework />
-          </div>
-        </ul>
-      )} */}
+    <div className="flex flex-col justify-end">
+      <OpenMenu isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
     </div>
   );
 }
