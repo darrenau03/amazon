@@ -21,9 +21,9 @@ export default function ScrollCoursework({ toggleFunction }) {
         toggleFunction();
       }}
     >
-      <div className=" hover:bg-sky-700 flex rounded-lg mr-5 ml-5">
+      <div className="flex rounded-lg mr-5 ml-5">
         {/* <ClipboardIcon className="flex max-w-[20px] mr-2 rounded-md fill-[#495057]"></ClipboardIcon> */}
-        <h1 className="flex items-center whitespace-nowrap text-[#495057]">
+        <h1 className="flex items-center whitespace-nowrap text-[#495057] hover:text-slate-300">
           Course Work
         </h1>
       </div>
