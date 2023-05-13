@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React, { useEffect } from "react";
+
 import { MenuToggle } from "./menuToggle";
 
 import ScrollCoursework from "./ScrollCoursework";
@@ -12,6 +14,14 @@ export default function OpenMenu() {
   const flipOpen = () => {
     setOpen(!isOpen);
   };
+
+  useEffect(() => {
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+      }
+    });
+  });
 
   return (
     // JSX to render the menu
