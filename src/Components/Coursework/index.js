@@ -8,7 +8,7 @@ function Coursework({ grade }) {
     >
       <div className="flex text-4xl justify-center font-bold">Course Work</div>
       {/* <div className="flex justify-center mt-[20px]">GPA: 4.0</div> */}
-      <div className="flex flex-wrap mt-[50px] justify-left">
+      <div className="flex flex-wrap mt-[50px] justify-left p-4">
         <div className="p-4 w-80">
           <div className=" mb-[10px] text-3xl ">Fall 2021</div>
           <div>M E 316T: Thermodynamics{grade}</div>

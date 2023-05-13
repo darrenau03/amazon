@@ -24,18 +24,32 @@ const Modal = ({
   return (
     <div className=" bg-zinc-200 opacity-96 fixed inset-0 z-50 ">
       <div className="flex flex-col h-screen justify-center items-center ">
-        <div class="relative flex justify-end w-11/12">
-          <div class="absolute top-0 right-0 m-4">
-            <button onClick={handleOKClick} className="flex mb-5">
-              <div className="flex flex-row text-3xl justify-center align-center rounded-lg hover:bg-red-500 text-neutral-700 w-10 h-10">
-                x
-              </div>
-            </button>
-          </div>
-        </div>
         <div className="flex flex-row bg-white p-12 w-10/12 h-5/6 overflow-y-auto rounded-xl">
-          <div className="top-0 left-0">
+          <div className="">
             <div className="flex flex-col">
+              <div class="relative flex justify-end">
+                <div class="">
+                  <button onClick={handleOKClick} className="flex mb-5">
+                    <div className="flex flex-row text-4xl justify-center align-center rounded-lg hover:bg-red-500 text-neutral-700 w-10 h-10">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M18 6L6 18M6 6l12 12"
+                          stroke="#000"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
               <div className="text-2xl mb-[10px]">{projectName}</div>
               <div className=" text-xl mb-[10px] italic ">
                 Project Date: {projectDuration}
