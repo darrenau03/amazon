@@ -1,20 +1,28 @@
+import React from "react";
+import { useMediaQuery } from "react-responsive";
+
+import { DeviceSize } from "../responsive";
+import { MobileNavLinks } from "./mobileNavLinks";
+
 import ScrollCoursework from "./ScrollCoursework";
 import ScrollProjects from "./ScrollProjects";
 import ScrollToTop from "./ScrollToTop";
 
-const NavBar = () => {
-  return (
-    <div className="bg-[#adb5bd]/75 text-2xl sticky top-0 z-40 flex justify-center items-center flex-wrap font-bold">
-      <div className="flex max-w-[1400px] w-full justify-between items-center overflow-hidden ">
-        <ScrollToTop />
-        <div className="flex flex-row">
-          <ScrollProjects />
-          <ScrollCoursework />
-        </div>
+export function Navbar(props) {
+  const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
 
+  return (
+    <div className="bg-[#adb5bd]/75 text-2xl fixed top-0 z-40 flex justify-center flex-wrap font-bold w-full">
+      <div className="flex max-w-[1400px] w-full justify-between items-center">
+        <ScrollToTop />
+        <div className="flex flex-row m-4">
+          {/* <ScrollProjects />
+          <ScrollCoursework /> */}
+          {!isMobile && <ScrollProjects toggleFunction={null} />}
+          {!isMobile && <ScrollCoursework toggleFunction={null}/>}
+          {isMobile && <MobileNavLinks />}
+        </div>
       </div>
     </div>
   );
-};
-
-export default NavBar;
+}

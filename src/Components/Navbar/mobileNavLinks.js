@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
-import { MenuToggle } from "./menuToggle";
 
-import ScrollCoursework from "./ScrollCoursework";
-import ScrollProjects from "./ScrollProjects";
 import OpenMenu from "./OpenMenu";
 
 export function MobileNavLinks(props) {

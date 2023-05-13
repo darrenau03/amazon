@@ -1,4 +1,5 @@
 import { PuzzleIcon } from "@heroicons/react/solid";
+import React, { useState } from "react";
 
 function findPos(obj) {
   var curtop = 0;
@@ -10,19 +11,23 @@ function findPos(obj) {
   }
 }
 
-export default function ScrollProjects() {
+export default function ScrollProjects({ toggleFunction = null}) {
   return (
+    // onClick={clicked(toggle)}
     <div
-      onClick={() =>
+      onClick={() => {
         window.scrollTo({
           top: findPos(document.getElementById("proj")) - 60,
           behavior: "smooth",
-        })
-      }
+        });
+        if (toggleFunction !== null){
+          toggleFunction();
+        }
+      }}
     >
-      <div className="hover:bg-sky-700 rounded-lg flex mr-5 ml-5">
-        <PuzzleIcon className=" flex max-w-[20px] fill-[#495057]  mr-2 rounded-md "></PuzzleIcon>
-        <h1 className="flex items-center text-[#495057]">Projects</h1>
+      <div className=" rounded-lg flex mr-5 ml-5">
+        {/* <PuzzleIcon className=" flex max-w-[20px] fill-[#495057]  mr-2 rounded-md "></PuzzleIcon> */}
+        <h1 className="flex items-center text-[#495057] hover:text-slate-300">Projects</h1>
       </div>
     </div>
   );

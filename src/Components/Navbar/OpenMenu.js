@@ -27,8 +27,8 @@ export default function OpenMenu() {
             </div>
 
             <div className="flex flex-col space-y-4 mt-9 ">
-              <ScrollProjects isOpen={isOpen} toggleFunction={flipOpen} />
-              <ScrollCoursework isOpen={isOpen} toggleFunction={flipOpen} />
+              <ScrollProjects  toggleFunction={flipOpen} />
+              <ScrollCoursework  toggleFunction={flipOpen} />
             </div>
           </ul>
         </div>
