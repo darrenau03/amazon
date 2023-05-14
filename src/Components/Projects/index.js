@@ -733,6 +733,15 @@ const Projects = () => {
                 AWS.
               </p>
               <p>
+                Most of the components are implemented from scratch. The timeline is taken from {" "}
+                <a
+                  href="https://stephane-monnot.github.io/react-vertical-timeline/#/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  React Vertical Timeline
+                </a>
+              </p>
+              <p>
                 {" "}
                 <a
                   href="https://github.com/darrenau03/amazon"

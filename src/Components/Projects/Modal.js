@@ -25,10 +25,10 @@ const Modal = ({
     <div className=" bg-zinc-200 opacity-96 fixed inset-0 z-50 ">
       <div className="flex flex-col h-screen justify-center items-center ">
         <div className="flex flex-row bg-white p-12 w-10/12 h-5/6 overflow-y-auto rounded-xl">
-          <div className="">
+          <div className="w-full">
             <div className="flex flex-col">
               <div class="relative flex justify-end">
-                <div class="">
+                <div class="flex">
                   <button onClick={handleOKClick} className="flex mb-5">
                     <div className="flex flex-row text-4xl justify-center align-center rounded-lg hover:bg-red-500 text-neutral-700 w-10 h-10">
                       <svg

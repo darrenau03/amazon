@@ -7,7 +7,7 @@ const Media = ({ image, caption, video }) => {
   const clicked = () => {
     setImageOn(true);
   };
-  if(!video){
+  if (!video) {
     return (
       <div className="flex p-2">
         <div onClick={clicked} className="flex flex-col">
@@ -25,7 +25,7 @@ const Media = ({ image, caption, video }) => {
         )}
       </div>
     );
-  }else{
+  } else {
     return (
       <div className="flex p-2">
         <div className="flex flex-col">
@@ -37,7 +37,6 @@ const Media = ({ image, caption, video }) => {
       </div>
     );
   }
-  
 };
 
 export default Media;
