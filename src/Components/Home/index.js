@@ -12,7 +12,7 @@ const Home = () => {
           <div className="flex flex-col h-1/2 justify-center items-center">
             <h1 className="font-bold text-4xl mb-4">Hi, I'm Darren!</h1>
             <h2 className="mb-4">
-              I am a sophomore at the{" "}
+              I am a junior at the{" "}
               <a
                 href="https://www.utexas.edu/"
                 className=" text-[#0E19B1] hover:text-purple-800"

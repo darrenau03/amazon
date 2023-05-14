@@ -53,7 +53,7 @@ function Coursework({ grade }) {
         </div>
         <div className="p-4 w-96">
           <div className=" mb-[10px] text-3xl ">Summer and Fall 2023</div>
-          <div>N/A; Internship{grade}</div>
+          <div>N/A: Internship{grade}</div>
         </div>
       </div>
     </div>
