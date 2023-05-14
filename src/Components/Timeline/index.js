@@ -11,7 +11,7 @@ import {
 
 export function Timeline() {
   return (
-    <div className="flex w-5/6 flex-col mb-[50px]" id="timeline ">
+    <div className="flex w-5/6 flex-col mb-[50px]" id="experience">
       <div className="flex text-4xl justify-center font-bold mb-[50px] mt-[100px]">
         Experience
       </div>

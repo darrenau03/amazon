@@ -15,7 +15,7 @@ export default function ScrollTimeline({ toggleFunction = null}) {
     <div
       onClick={() => {
         window.scrollTo({
-          top: findPos(document.getElementById("timeline")) - 60,
+          top: findPos(document.getElementById("experience")) - 60,
           behavior: "smooth",
         });
         if (toggleFunction !== null){
