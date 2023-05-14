@@ -51,6 +51,10 @@ function Coursework({ grade }) {
           <div>M E 134: Materials Engineering Lab {grade}</div>
           <div>M E 130: Fluid Mechanics Lab{grade}</div>
         </div>
+        <div className="p-4 w-80">
+          <div className=" mb-[10px] text-3xl ">Summer and Fall 2023</div>
+          <div>N/A; Internship{grade}</div>
+        </div>
       </div>
     </div>
   );
