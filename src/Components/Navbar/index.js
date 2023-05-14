@@ -7,6 +7,7 @@ import { MobileNavLinks } from "./mobileNavLinks";
 import ScrollCoursework from "./ScrollCoursework";
 import ScrollProjects from "./ScrollProjects";
 import ScrollToTop from "./ScrollToTop";
+import ScrollExperience from "./ScrollExperience";
 
 export function Navbar(props) {
   const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
@@ -18,8 +19,11 @@ export function Navbar(props) {
         <div className="flex flex-row m-4">
           {/* <ScrollProjects />
           <ScrollCoursework /> */}
+
+          {!isMobile && <ScrollExperience toggleFunction={null} />}
           {!isMobile && <ScrollProjects toggleFunction={null} />}
-          {!isMobile && <ScrollCoursework toggleFunction={null}/>}
+          {!isMobile && <ScrollCoursework toggleFunction={null} />}
+
           {isMobile && <MobileNavLinks />}
         </div>
       </div>

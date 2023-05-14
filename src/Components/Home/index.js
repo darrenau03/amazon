@@ -10,7 +10,7 @@ const Home = () => {
       <div className="flex flex-wrap items-center w-2/3 ">
         <div className="flex flex-col justify-center h-auto  text-2xl">
           <div className="flex flex-col h-1/2 justify-center items-center">
-            <h1 className="font-bold mb-4">Hi, I'm Darren!</h1>
+            <h1 className="font-bold text-4xl mb-4">Hi, I'm Darren!</h1>
             <h2 className="mb-4">
               I am a sophomore at the{" "}
               <a
@@ -35,6 +35,7 @@ const Home = () => {
               </a>{" "}
             </h2>
           </div>
+          
           <div className="flex justify-center items-center italic h-[80px]">
             {/* <Typewriter
               options={{
@@ -53,14 +54,17 @@ const Home = () => {
           <div className="flex flex-row items-center justify-between mt-[50px] h-[20px]">
             <div>
               <a
-                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume.pdf"}
+                href={
+                  "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume.pdf"
+                }
                 target="_blank"
                 rel="noreferrer noopener"
                 className=" hover:text-slate-300 font-bold"
               >
-                 Resume
+                Resume
               </a>
             </div>
+            
             {/* <div>
               <a
                 href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume_SWE.pdf"}
