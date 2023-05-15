@@ -16,7 +16,7 @@ const Projects = () => {
           projectName={"Thrust Vector Control"}
           image={require("../../images/TVC/TREL.png")}
           description="Gimbal mechanism for rocket engine"
-          projectDuration={"Jan 2022 - Present"}
+          projectDuration={"Jan 2022 - May 2023"}
           toolsUsed={"Solidworks, Ansys, Arduino"}
           modalHtml={
             <div className="space-y-4 flex flex-col">
@@ -205,7 +205,7 @@ const Projects = () => {
                   Instagram
                 </a>
               </p>
-              <p className="text-xs">Progress as of December 2022</p>
+              <p className="text-xs">Progress as of March 2023</p>
             </div>
           }
         />
@@ -256,7 +256,6 @@ const Projects = () => {
                     "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/FIRE_Final.pdf"
                   }
                   target="_blank"
-                  rel="noreferrer noopener"
                   className="text-blue-600 hover:text-purple-800"
                 >
                   PDF of Final Report
@@ -269,9 +268,9 @@ const Projects = () => {
           projectName={"Longhorn Racing: Electric"}
           image={require("../../images/LHR/LHR.png")}
           description="Member of LHR Electric Team"
-          projectDuration={"Feb 2022-Present"}
+          projectDuration={"Feb 2022 - May 2023"}
           toolsUsed={
-            "lathe, manual mill, tig welder, 3d printer, laser cutter, drop saw, hand tools, assisted cnc mill operation"
+            "Lathe, Manual Mill, Tig Welder, GD&T, CNC Mill Operation, 3d Printer, Laser Cutter, Drop Saw, Hand Tools"
           }
           modalHtml={
             <div className="space-y-4 flex flex-col">
@@ -532,7 +531,6 @@ const Projects = () => {
                   "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TermProjPresentation.pdf"
                 }
                 target="_blank"
-                rel="noreferrer noopener"
                 className="text-blue-600 hover:text-purple-800"
               >
                 PDF of Presentation
@@ -542,7 +540,6 @@ const Projects = () => {
                   "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Final.ipynb"
                 }
                 target="_blank"
-                rel="noreferrer noopener"
                 className="text-blue-600 hover:text-purple-800"
               >
                 Jupyter Notebook of Code
@@ -550,11 +547,102 @@ const Projects = () => {
             </div>
           }
         />
+        <ModalTile
+          projectName={"Mechatronics Lab Final"}
+          image={require("../../images/ME 140L/ME 140L.png")}
+          description="Final Project for Data Analytics Course"
+          projectDuration={"May 2023"}
+          toolsUsed={"Oscilloscope, Multimeter, Breadboarding"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p>
+                As part of the Final Project for the Mechatronics Lab course I
+                took, we were required to create a method of converting energy
+                from a fan mounted to a generator to power several leds, which
+                together would indicate the speed of the fan.
+              </p>
+              <p>
+                It uses a full wave rectifier to convert the AC power from the
+                generator to DC power. This power is fed into a transistor that
+                in turns powers the variable LED, which brightness indicates the
+                speed of the fan. The brightness can be tuned with a
+                potentiometer. A voltage signal is also taken off the transistor
+                and routed to a comparator which toggles between the red and
+                green LED which indicates whether the fan is spinning too fast
+                or slow.
+              </p>
+              <div className="flex justify-center">
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/ME+140L.mp4"
+                      }
+                    />
+                  }
+                  caption={"Demo"}
+                  video={true}
+                ></Media>
+              </div>
+            </div>
+          }
+        />
       </div>
+
       <div className="flex text-4xl justify-center font-bold mt-[100px] mb-[50px]">
         Personal Projects
       </div>
+
       <div className="flex flex-wrap flex-row justify-center">
+        <ModalTile
+          projectName={"Website"}
+          image={require("../../images/Website/Website.png")}
+          description="Website for Personal Portfolio"
+          projectDuration={"May 2022 - Present"}
+          toolsUsed={"Javascript, React, Tailwind CSS"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col">
+              <p> I think most of it speaks for itself :)</p>
+              <p>
+                Written with Javasciprt, TailwindCSS, ReactJS, and hosted on
+                AWS.
+              </p>
+              <p>
+                Most of the components are implemented from scratch. The
+                timeline is taken from{" "}
+                <a
+                  href="https://stephane-monnot.github.io/react-vertical-timeline/#/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  React Vertical Timeline
+                </a>
+              </p>
+              <p>
+                {" "}
+                <a
+                  href="https://github.com/darrenau03/amazon"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  Link to GitHub Repo
+                </a>
+                !
+              </p>
+              <p>
+                {" "}
+                Credit to Kevin Yu and his{" "}
+                <a
+                  href="https://kevinhyu.com/"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  site
+                </a>{" "}
+                for a decent amount of inspiration.
+              </p>
+              <p></p>
+            </div>
+          }
+        />
         <ModalTile
           projectName={"1DOF"}
           image={require("../../images/1DOF/1DOF.png")}
@@ -721,61 +809,33 @@ const Projects = () => {
         />
 
         <ModalTile
-          projectName={"Website"}
-          image={require("../../images/Website/Website.png")}
-          description="Website for Personal Portfolio"
-          projectDuration={"May 2022"}
-          toolsUsed={"Javascript, React, Tailwind CSS"}
-          modalHtml={
-            <div className="space-y-4 flex flex-col">
-              <p> I think most of it speaks for itself :)</p>
-              <p>
-                Written with Javasciprt, TailwindCSS, ReactJS, and hosted on
-                AWS.
-              </p>
-              <p>
-                Most of the components are implemented from scratch. The
-                timeline is taken from{" "}
-                <a
-                  href="https://stephane-monnot.github.io/react-vertical-timeline/#/"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  React Vertical Timeline
-                </a>
-              </p>
-              <p>
-                {" "}
-                <a
-                  href="https://github.com/darrenau03/amazon"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  Link to GitHub Repo
-                </a>
-                !
-              </p>
-              <p>
-                {" "}
-                Credit to Kevin Yu and his{" "}
-                <a
-                  href="https://kevinhyu.com/"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  site
-                </a>{" "}
-                for a decent amount of inspiration.
-              </p>
-              <p></p>
-            </div>
-          }
-        />
-        <ModalTile
           projectName={"Yuumi Bot"}
           image={require("../../images/Yuumi Bot/Yuumi.png")}
           description="An AI bot to play Yuumi in League of Legends"
           projectDuration={"July 2021"}
-          toolsUsed={"Python"}
+          toolsUsed={"Python, Machine Learning, Multithreading, "}
           modalHtml={
             <div className="space-y-4 flex flex-col">
+              <p>
+                Update May 2023: I got around to training it on a more robust dataset and running more recognition off the model as opposed to image matching. The limitations are apparent though with smaller images, as it has a lot of difficulties recognizing small features.
+              </p>
+              <div className="flex justify-center">
+                  <Media
+                    image={
+                      <video
+                        controls
+                        src={
+                          "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Yuumibot4.mp4"
+                        }
+                      />
+                    }
+                    video={true}
+                    caption={"Gameplay/Debugging Setup"}
+                  ></Media>
+                </div>
+              <p>
+
+              </p>
               <p>
                 As the description says, I made an AI bot to play the character
                 Yuumi in League of Legends using Python. In the past, I made a

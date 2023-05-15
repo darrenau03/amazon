@@ -27,15 +27,18 @@
                 </a>
               </div>
               <div className="flex justify-center">
-                {/* <div className="object-scale-down max-w-[400px] flex mt-10 mb-5 rounded mx-auto">
-                  <video controls src={video} />{" "}
-                </div>{" "} */}
-                <Function
-                  image={<video controls src={OneDOFvid} />}
-                  caption={
-                    "Animation: angle flipped because downwards was positive for this 3DOF animation block"
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/TVC1.mp4"
+                      }
+                    />
                   }
-                ></Function>
+                  caption={"LabVIEW VI Test"}
+                  video={true}
+                ></Media>
               </div>
               <div className="flex justify-center">
                 <Function
