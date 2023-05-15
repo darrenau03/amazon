@@ -10,7 +10,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="overflow-x:hidden">
       <Helmet>
         <style>{"body { background-color: #7F8487; }"}</style>
       </Helmet>
