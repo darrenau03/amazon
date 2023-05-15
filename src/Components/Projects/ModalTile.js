@@ -2,6 +2,19 @@ import React from "react";
 import { useState } from "react";
 import Modal from "./Modal";
 
+function disableScroll() {
+  // Get the current scroll position
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  // Save the current scroll position
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+// Enable scrolling
+
 const ModalTile = ({
   projectName,
   image,
@@ -16,6 +29,7 @@ const ModalTile = ({
   const clicked = () => {
     setModalOn(true);
     document.body.style.overflow = "hidden";
+    disableScroll();
   };
 
   return (
