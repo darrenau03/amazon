@@ -106,9 +106,9 @@ const Modal = ({
   // );
   return (
     <div className=" bg-zinc-200 fixed inset-0 z-50 ">
-      <div className="flex flex-row h-screen justify-center ">
+      <div className="flex flex-row  h-screen justify-center ">
         {!isMobile && (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center w-full">
             <div className="flex flex-row bg-white p-12  w-10/12 h-5/6 overflow-y-scroll rounded-xl ">
               <div className="flex justify-start w-full flex-col">
                 <div className="flex flex-col ">

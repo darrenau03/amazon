@@ -84,7 +84,8 @@ const Projects = () => {
               </p>
               <p>
                 <p class="font-bold">
-                  Some of the work I've done / things I've learned through tackling this project
+                  Some of the work I've done / things I've learned through
+                  tackling this project
                 </p>
                 <ul>
                   <li>
@@ -733,7 +734,8 @@ const Projects = () => {
                 AWS.
               </p>
               <p>
-                Most of the components are implemented from scratch. The timeline is taken from {" "}
+                Most of the components are implemented from scratch. The
+                timeline is taken from{" "}
                 <a
                   href="https://stephane-monnot.github.io/react-vertical-timeline/#/"
                   className=" text-blue-600 hover:text-purple-800"
@@ -1026,7 +1028,7 @@ const Projects = () => {
           projectDuration={"June 2021"}
           toolsUsed={"Python, Selenium"}
           modalHtml={
-            <div className="space-y-4 flex flex-col">
+            <div className="space-y-4 flex flex-col w-full">
               <p>
                 Most info can be found on the{" "}
                 <a
@@ -1052,6 +1054,7 @@ const Projects = () => {
                   }
                   video={true}
                   caption={"Demo"}
+                  className="flex justify-center"
                 ></Media>
               </div>
             </div>
