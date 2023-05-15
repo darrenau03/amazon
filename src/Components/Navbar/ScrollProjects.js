@@ -27,7 +27,7 @@ export default function ScrollProjects({ toggleFunction = null}) {
     >
       <div className=" rounded-lg flex mr-5 ml-5">
         {/* <PuzzleIcon className=" flex max-w-[20px] fill-[#495057]  mr-2 rounded-md "></PuzzleIcon> */}
-        <h1 className="flex items-center text-[#495057] hover:text-slate-300">Projects</h1>
+        <h1 className="flex items-center text-[#495057] hover:scale-[1.2] ">Projects</h1>
       </div>
     </div>
   );

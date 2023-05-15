@@ -51,7 +51,7 @@ const Home = () => {
               }}
             /> */}
           </div>
-          <div className="flex flex-row items-center justify-between mt-[50px] h-[20px]">
+          <div className="flex flex-row items-center justify-between mt-[50px] h-[20px] ">
             <div>
               <a
                 href={
@@ -59,22 +59,12 @@ const Home = () => {
                 }
                 target="_blank"
                 rel="noreferrer noopener"
-                className=" hover:text-slate-300 font-bold"
+                className="font-bold"
               >
-                Resume
+                <div className="hover:scale-[1.2] ">Resume</div>
               </a>
             </div>
 
-            {/* <div>
-              <a
-                href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume_SWE.pdf"}
-                target="_blank"
-                rel="noreferrer noopener"
-                className=" hover:text-purple-800 font-bold"
-              >
-                 Resume - SWE
-              </a>
-            </div> */}
             <Linkedin></Linkedin>
             <Github></Github>
           </div>

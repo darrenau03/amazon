@@ -6,7 +6,7 @@ export default function ScrollToTop() {
   };
   return (
     <div onClick={handleClick}>
-      <div className="hover:bg-sky-700  flex mr-5 ml-5 ">
+      <div className="hover:scale-[1.2]   flex mr-5 ml-5 ">
         <img src={github} className=" max-w-[40px]"></img>
       </div>
     </div>
