@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className=" flex flex-wrap justify-around h-1/3 p-10 mt-10">
       <div className="flex flex-wrap items-center w-2/3 ">
-        <div className="flex flex-col justify-center h-auto  text-2xl">
+        <div className="flex flex-col justify-center h-auto text-2xl">
           <div className="flex flex-col h-1/2 justify-center items-center">
-            <h1 className="font-bold text-4xl mb-4">Hi, I'm Darren!</h1>
+            <h1 className="font-bold text-4xl mb-4 mt-10">Hi, I'm Darren!</h1>
             <h2 className="mb-4">
               I am a junior at the{" "}
               <a
@@ -35,7 +35,7 @@ const Home = () => {
               </a>{" "}
             </h2>
           </div>
-          
+
           <div className="flex justify-center items-center italic h-[80px]">
             {/* <Typewriter
               options={{
@@ -64,7 +64,7 @@ const Home = () => {
                 Resume
               </a>
             </div>
-            
+
             {/* <div>
               <a
                 href={"https://s3.us-west-1.amazonaws.com/darrenau.com/S3/Darren_Au_Resume_SWE.pdf"}
