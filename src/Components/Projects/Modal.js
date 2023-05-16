@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
-import { DeviceSize } from "../responsive";
-import { MobileNavLinks } from "../../Components/Navbar/mobileNavLinks";
+import { DeviceSize } from "../../Constants";
 import { useMediaQuery } from "react-responsive";
 import XButton from "./XButton";
 

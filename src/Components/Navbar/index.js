@@ -1,7 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
-import { DeviceSize } from "../responsive";
+import { DeviceSize } from "../../Constants";
 import { MobileNavLinks } from "./mobileNavLinks";
 
 import ScrollCoursework from "./ScrollCoursework";
