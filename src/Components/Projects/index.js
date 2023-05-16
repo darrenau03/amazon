@@ -812,7 +812,7 @@ const Projects = () => {
           projectName={"Yuumi Bot"}
           image={require("../../images/Yuumi Bot/Yuumi.png")}
           description="An AI bot to play Yuumi in League of Legends"
-          projectDuration={"July 2021"}
+          projectDuration={"July 2023"}
           toolsUsed={"Python, Machine Learning, Multithreading, "}
           modalHtml={
             <div className="space-y-4 flex flex-col">
@@ -952,15 +952,6 @@ const Projects = () => {
                 threads. The live computer vision was also a fun experiment and
                 something I forsee being very useful for any future robotics
                 applications.
-              </p>
-              <p>
-                The code is linked here:{" "}
-                <a
-                  href="https://github.com/darrenau03/yuumi-bot"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  GitHub
-                </a>
               </p>
             </div>
           }
