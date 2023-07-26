@@ -248,7 +248,7 @@ const Projects = () => {
             </div>
           }
         />
-        <ModalTile
+        {/* <ModalTile
           projectName={"Longhorn Racing: Electric"}
           image={require("../../images/LHR/LHR.png")}
           description="Member of LHR Electric Team"
@@ -283,7 +283,7 @@ const Projects = () => {
               </p>
             </div>
           }
-        />
+        /> */}
         <ModalTile
           projectName={"HeRo Summer Research"}
           image={require("../../images/HeRo/HeRo.png")}

@@ -4,6 +4,7 @@ ignore me lol
 
 # dependencies
 /node_modules
+/.yarn
 /.pnp
 .pnp.js
 
