@@ -44,7 +44,7 @@ export function Timeline() {
             </a>
           </h3>
           <h4 className="italic ">Kent, WA</h4>
-          <p>Mechanical Engineering Intern</p>
+          <p>Robotics Engineering Intern</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           date="Aug 2021 - May 2023"
