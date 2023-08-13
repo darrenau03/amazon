@@ -64,7 +64,7 @@ export function Timeline() {
             Bipropellant Rocket
           </p>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           date="Feb 2022 - May 2023"
           icon={<img src={LHR} style={{ borderRadius: 400 / 2 }}></img>}
         >
@@ -80,7 +80,7 @@ export function Timeline() {
           <p>
             Designed and Manufactured Components for Collegiate EV FSAE Team
           </p>
-        </VerticalTimelineElement>
+        </VerticalTimelineElement> */}
         <VerticalTimelineElement
           date="Aug 2022 - July 2023"
           icon={<img src={UT} style={{ borderRadius: 400 / 2 }}></img>}
