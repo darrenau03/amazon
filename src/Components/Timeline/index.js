@@ -29,7 +29,7 @@ export function Timeline() {
             </a>
           </h3>
           <h4 className="italic ">Hawthrone, CA</h4>
-          <p>Starship Components Manufacturing Intern</p>
+          <p>Starship Components Engineering Intern</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           date="Jun 2023 - Aug 2023"
