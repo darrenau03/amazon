@@ -284,7 +284,7 @@ const Projects = () => {
             </div>
           }
         /> */}
-        <ModalTile
+        {/* <ModalTile
           projectName={"HeRo Summer Research"}
           image={require("../../images/HeRo/HeRo.png")}
           description="Undergraduate Summer Researcher"
@@ -494,8 +494,8 @@ const Projects = () => {
               </p>
             </div>
           }
-        />
-        <ModalTile
+        /> */}
+        {/* <ModalTile
           projectName={"Data Analytics Final"}
           image={require("../../images/CS 329E/CS329.png")}
           description="Final Project for Data Analytics Course"
@@ -530,8 +530,8 @@ const Projects = () => {
               </a>
             </div>
           }
-        />
-        <ModalTile
+        /> */}
+        {/* <ModalTile
           projectName={"Mechatronics Lab Final"}
           image={require("../../images/ME 140L/ME 140L.png")}
           description="Final Project for Data Analytics Course"
@@ -571,7 +571,7 @@ const Projects = () => {
               </div>
             </div>
           }
-        />
+        /> */}
       </div>
 
       <div className="flex text-4xl justify-center font-bold mt-[100px] mb-[50px]">
@@ -940,7 +940,7 @@ const Projects = () => {
             </div>
           }
         />
-        <ModalTile
+        {/* <ModalTile
           projectName={"JetBot"}
           image={require("../../images/JetBot/jetbot.png")}
           description="AI Robot Car"
@@ -999,8 +999,8 @@ const Projects = () => {
               </div>
             </div>
           }
-        />
-        <ModalTile
+        /> */}
+        {/* <ModalTile
           projectName={"Gas Bot"}
           image={require("../../images/Gas Bot/Gas Bot.png")}
           description="Gas Bot to Determine Cheapest Gas"
@@ -1054,48 +1054,9 @@ const Projects = () => {
               </div>
             </div>
           }
-        />
+        /> */}
 
-        <ModalTile
-          projectName={"Web Scrapping"}
-          image={require("../../images/Web Scrap/WS.png")}
-          description="Web Automation Projects using Selenium"
-          projectDuration={"June 2021"}
-          toolsUsed={"Python, Selenium"}
-          modalHtml={
-            <div className="space-y-4 flex flex-col w-full">
-              <p>
-                Most info can be found on the{" "}
-                <a
-                  href="https://github.com/darrenau03/UT-Course-Scraping"
-                  className=" text-blue-600 hover:text-purple-800"
-                >
-                  GitHub Repo
-                </a>
-              </p>
-              <div className="flex justify-center">
-                {/* <div className="object-scale-down max-w-[400px] flex mt-10 mb-5 rounded mx-auto">
-                  <video controls src={video} />{" "}
-                </div>{" "} */}
-
-                <Media
-                  image={
-                    <video
-                      controls
-                      src={
-                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/WS.mp4"
-                      }
-                    />
-                  }
-                  video={true}
-                  caption={"Demo"}
-                  className="flex justify-center"
-                ></Media>
-              </div>
-            </div>
-          }
-        />
-        <ModalTile
+        {/* <ModalTile
           projectName={"Arduino Bathroom Detector"}
           image={require("../../images/Bathroom Detector/cover.png")}
           description="Arduino Project to Detect if Roommate is in Bathroom"
@@ -1181,7 +1142,43 @@ const Projects = () => {
               </p>
             </div>
           }
-        />
+        /> */}
+        {/* <ModalTile
+          projectName={"Web Scrapping"}
+          image={require("../../images/Web Scrap/WS.png")}
+          description="Web Automation Projects using Selenium"
+          projectDuration={"June 2021"}
+          toolsUsed={"Python, Selenium"}
+          modalHtml={
+            <div className="space-y-4 flex flex-col w-full">
+              <p>
+                Most info can be found on the{" "}
+                <a
+                  href="https://github.com/darrenau03/UT-Course-Scraping"
+                  className=" text-blue-600 hover:text-purple-800"
+                >
+                  GitHub Repo
+                </a>
+              </p>
+              <div className="flex justify-center">
+
+                <Media
+                  image={
+                    <video
+                      controls
+                      src={
+                        "https://s3.us-west-1.amazonaws.com/darrenau.com/S3/WS.mp4"
+                      }
+                    />
+                  }
+                  video={true}
+                  caption={"Demo"}
+                  className="flex justify-center"
+                ></Media>
+              </div>
+            </div>
+          }
+        /> */}
       </div>
     </div>
   );
